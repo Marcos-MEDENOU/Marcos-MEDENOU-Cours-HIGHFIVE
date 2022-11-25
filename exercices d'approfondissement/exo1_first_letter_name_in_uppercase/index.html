@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let name1=window.prompt("Taper votre nom de famille");
+        let name2=window.prompt("Taper votre prénom");
+        function nameTransform(param1,param2){
+            let spaceStart=param1.trim();
+            let spaceEnd=param2.trim();
+           document.write(spaceStart.toLowerCase().replace(spaceStart.charAt(0).toLowerCase(),spaceStart.charAt(0).toUpperCase()) +" "+spaceEnd.toLowerCase().trim().replace(spaceEnd.charAt(0).toLowerCase(),spaceEnd.charAt(0).toUpperCase())+'<br>');
+           document.write(spaceStart.charAt(0).toUpperCase()+""+spaceEnd.charAt(0).trim().toUpperCase()) ;
+        }
+        nameTransform(name1,name2)
+
+        //coder unshift avec 
+        // let arr=[1,2,3,4,15,16,40]
+        // console.log(arr);                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+        // arr.splice(0,0,0)
+        // console.log(arr);
+
+        // function double(arr){
+        //     for(let i=0; i<arr.length;i++){
+        //         arr[i]+=arr[i];
+
+        //     }
+        //     console.log(arr)
+        // }
+        // double(array)
+        // double(array)
+
+
+        //     function double(arr){
+        //         let tableau=[];
+        //         arr.forEach(element => {             
+        //             tableau.push(element*2);
+        //         });  
+        //         console.log(tableau);          
+        //     }
+        //    double(array);
+        //    double(array);
+
+        // let array1=[1,2,3,4,5,6,7]
+        // function filter(arr){
+        //     let tableau=[];
+        //     arr.forEach(element => {
+        //         if(element%2==0){
+        //             tableau.push(element)
+        //         }
+        //     });
+        //     return tableau
+        // }
+        // let result=filter(array1);
+        // console.log(result)
+        // let array1 = [1, 2, 3, 4, 5, 6, 7]
+        // let filter = (arr) => {
+        //     let tableau = [];
+        //     arr.forEach(element => {
+        //         if (element % 2 == 0) {
+        //             tableau.push(element)
+        //         }
+        //     });
+        //     return tableau
+        // }
+        // let result = filter(array1);
+        // console.log(result)
+
+
+        //fonction fleché qui retourne le produit d'un nombre par lui-meme
+        let multiply = (number) => 
+        {
+            return number * number;
+        }
+
+        // function multiply(number){ 
+        //     return number * number;
+        // }
+        // console.log(multiply(5));
+        // //fonction fleché qui retourne la somme de deux nombre entrer par l'utilisateur
+        // let sum = (num1, num2) => 
+        // {
+        //     return num1 + num2;
+        // }
+        // console.log(sum(4, 5))
+        //exercice
+        // function tableauFilter(arr){
+        //     let tableau=[];
+        //     arr.map(e=>{
+        //         tableau.push(e.toUpperCase())
+        //     })
+        //     return tableau;
+        // }
+        // console.log(tableauFilter(["marcos","medenou","jonh", "doe"]));
+        let array1=[1,2,3,4,5,6,7]
+        // function sumArray(arr){
+        //     let i=0;
+        //     for (let index = 0; index < arr.length; index++) {
+        //         i+=arr[index] 
+        //     }
+        //     return i;
+        // } 
+
+        function sumArray(arr){
+            let i=0;
+            //Utilisaton de forEach
+            arr.forEach(element => {
+                i+=element;
+            });
+            return i;
+        } 
+        console.log(sumArray(array1));
+    </script>
+</body>
+
+</html>

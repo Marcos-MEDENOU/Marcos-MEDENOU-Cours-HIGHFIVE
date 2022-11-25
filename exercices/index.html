@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice 11</title>
+</head>
+<body>
+    <!-- EXERCICE 11 :Écrire un programme qui affiche uniquement le premier et le dernier élément 
+    d’un tableau peut importe les éléments qui s’y trouvent. function firstEnd
+    EXERCICE 12 :Écrire un programme qui affiche tous les éléments d’un tableau sans inclure 
+    le premier et le dernier, peut importe les éléments qui s’y trouvent.
+    EXERCICE 13 :Écrire un programme qui renvoie l’index de chacun des éléments 
+    qui se trouvent dans un tableau.
+    EXERCICE 14 :Écrire un programme qui renvoie le dernier élément d’un tableau 
+    peut importe les éléments qui s’y trouvent.
+    EXERCICE 15 :Écrire un programme qui renvoie le premier élément d’un tableau et les trois 
+    suivants peut importe les éléments qui s’y trouvent. [1,2,3,4,5,6] =>[1,2,3,4]
+    EXERCICE 16 : Écrire un programme qui supprime tous les chiffres 40 d’un tableau peut 
+    importe le nombre de fois qu’il s’y trouve.
+    EXERCICE 17 : Écrire un programme qui renvoie uniquement les multiples de 3 qui se trouve dans un tableau.
+    EXERCICE 18 : Écrire un programme Écrire un programme qui renvoie  les nombres pairs d’une part et les nombres 
+    impairs d’autres parts qui se trouve dans un tableau. Chacun des nombres devra être placé par ordre décroissantes 
+    NB : il faudra penser a retourner deux tableaux, un tableau contenant les nombres pairs et un autre contenant les 
+    nombres impairs. Vous pouvez le faire avec la méthode filter, oui mais ne vous limitez pas a cela. Pensez aux structures conditionnelle 
+    et aux boucles. Le plus important ici, c’est d’avoir le même résultat avec au moins trois codes qui se différent par leurs syntaxes. 
+
+    EXERCICE 19 :Écrire un programme qui renvoie un tableau contenant la racine carrée 
+    de tous les éléments qui se trouvent dans le tableau qu’il aurait reçu en entré.
+
+    EXERCICE 20 : Écrire un programme qui multiplie par 3, 
+    la somme de tous les éléments d’un tableau.-->
+
+    <script>
+        // function firstEnd(tab){
+        //     return 'Le premier element du tableau est : ' + tab[0]+ ' et le dernier element est '+ tab[tab.length-1];
+        // }
+        // console.log(firstEnd([0,1,2,'marcos',3,4,6]));
+
+       /* function noFirstEnd(tab){
+            return tab.splice(1,tab.length-2)
+        }
+        console.log(noFirstEnd([0,1,2,'marcos',3,4,6]));*/
+        
+        /*function index(tab){
+            for (let index = 0; index < tab.length; index++) {
+                console.log('Lelement a lindex '+ index + ' est: '+ tab[index]);
+            }
+        }
+
+        index([0,1,2,'marcos',3,4,6, 7,8,9,11]);*/
+        // function endElement(tab){
+        //     // return tab[tab.length-1]
+        //     console.log(typeof(tab.slice(-1).join('')));
+        //     return tab.slice(-1).join('')
+        // }
+
+        // console.log(endElement([0,1,2,'marcos',3,4,6]));
+        let tab=[40,0,1,40,2,3,40,5,6,7]
+        // let i=tab.map(function(num, index, tableau){
+        //     return num*2
+        // })
+        // console.log(i);
+
+        // function arr(tab){
+        //     let tableau=[];
+        //     for (let index = 0; index < 4; index++) {
+                
+        //         tableau.push(tab[index]) 
+        //     }
+        //     return tableau;
+        // }
+        // console.log(arr(tab));
+
+        // function The40(tab){
+        //     let tableau=[];
+        //     for (let index = 0; index < tab.length; index++) {
+        //         if(tab[index] !==40){
+        //             tableau.push(tab[index])
+        //         }   
+        //     }
+        //     return tableau;
+        // }
+
+        // console.log(The40(tab));
+
+        // function multiple3(tab){
+        //     let tableau=[];
+        //     for (let index = 0; index < tab.length; index++) {
+        //         if( tab[index] % 3 ===0){
+        //             tableau.push(tab[index])
+        //         }
+        //     }
+        // }
+        // console.log(multiple3(tab));
+        
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>

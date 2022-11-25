@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>VUEJS</title>
+</head>
+<body>
+    <div id="app">
+        <h1>To-Do-List</h1>
+        <form action="#">
+            <input type="text"  placeholder="enter your lastname" v-model="input">
+            <input type="text"  placeholder="enter your firstname"  v-model="gh">
+            <button type="submit">submit</button>
+        </form>
+        <p>Valeur de la variable :{{input}}</p>
+        <p>Valeur de la variable :{{gh}}</p>
+        <p>Je m'appelle {{gk}}</p>
+    </div>
+    <script>
+        // const app=document.getElementById('app')
+        // Instanciation d'un objet vue qui permet d'avoir aux fonctionnalités associés
+        const vue=new Vue({
+            // el:"#app",
+            //option utiliser pour lier la div avec l'id app
+            // template:
+            // `
+            //     <div> 
+            //         <h1>hello Vue from Highfive !
+            //         </h1> <p>Marcos MEDENOU</p> 
+            //     </div>
+            // `
+            //template est une optionutilisé pour definir le markup html de  la page 
+            //Le template ne doit avoir qu'un seul parennt
+            data:{
+                user:"marcos",
+                msg:"I'm the best",
+                input:'',
+                gh:'',
+                // gk:input+gh,
+                name:function(nom){
+                    return nom.length;
+                }
+             }
+        }).$mount('#app'); //Instanciation d'un objet vue 
+        
+    </script>
+</body>
+</html>

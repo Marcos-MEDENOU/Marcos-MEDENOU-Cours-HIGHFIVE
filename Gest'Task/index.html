@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./vue.global.js"></script>
+    <title>Gest'Tasks</title>
+    <style>
+        .done{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <form action="#" @submit.prevent="addTask">
+            <input type="text" v-model="input">
+            <button type="submit">Add</button>
+        </form>
+        <ul>
+            <li v-for="el in filterTaskAchivement"  :id="el.id">
+                <input type="checkbox" v-model="el.done">
+                <span :class="{done:el.done}"> {{el.text}}</span>
+                <button v-on:click="removeTask(el)">X</button>
+            </li>
+        </ul>
+        <!-- @click="hideCompleted = !hideCompleted" -->
+        <!-- {{hideCompleted ? "Hide completed":"Show all"}} -->
+        <button   @click.prevent=" this.hideCompleted=!this.hideCompleted"> {{hideCompleted ? "Show all":"Hide completed"}}</button>
+    </div>
+    <script>
+        let id=0;
+        const app=Vue.createApp({
+            data:function(){
+                return {
+                    text:"hello",
+                    apppName:"Gest'Task",
+                    version:"1.0.5",
+                    tasks:[],
+                    input:'',
+                    hideCompleted:false,
+                 
+                }
+            },
+            methods:{
+                addTask:function(){
+                    this.tasks.push({id:id++, text:this.input , done:false});
+                    this.input='';
+                },
+
+                removeTask:function(todo){
+                    this.tasks=this.tasks.filter((el)=>el !==todo)
+                },
+                
+            },
+
+            computed:{
+                filterTaskAchivement:function(){ 
+                    if(this.hideCompleted){
+                        return this.tasks.filter((el)=>el.done !==true)
+                    }else{
+                        return this.tasks;    
+                    }
+                
+            }
+            }
+        }).mount("#app")
+    </script>
+</body>
+</html>

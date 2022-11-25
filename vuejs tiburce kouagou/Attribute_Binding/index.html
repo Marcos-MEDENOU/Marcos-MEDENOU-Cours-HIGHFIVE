@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Binding</title>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <p>
+            <span :title="message">
+                Survolez-moi quelques secondes pour voir mon titre lié dynamiquement
+            </span>
+        </p>
+
+        <!-- 
+            la liaison de classes a un support spécial pour le objets
+            et les tableaux
+         -->
+         <p :class="{red: isRed}"  @click="toggleRed">
+            Ce texte devrait être rouge... mais cliquez moi pour switcher cela.
+         </p>
+
+         <!-- 
+            la liaison de styles est également supportée pour les objets
+            et les tableaux
+         -->
+         <p :style="{color}" @click="toggleColor">
+            Ce texte devrait être green, et devrait varier entre vert et bleu au clique.
+         </p>
+    </div>
+
+    <!-- Import Vue -->
+    <script src="../vue.global.js"></script>
+    <script type="module">
+
+        Vue.createApp({
+            data() {
+                return {
+                    message: "Hello World !",
+                    isRed: false,
+                    color: "green",
+                }
+            },
+            methods: {
+                toggleRed() {
+                    this.isRed = !this.isRed;
+                },
+
+                toggleColor() {
+                    this.color = this.color === 'green' ? 'blue' : 'green';
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

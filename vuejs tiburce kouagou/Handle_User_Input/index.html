@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ message }}</h1>
+        <!-- 
+            Liaison à une method/fonction
+            La syntax @click est le raccourci pour v-on:click
+         -->
+         <button @click="reverMessage()">Reverse Message</button>
+         <!-- Nous pouvons également utiliser une expression en ligne -->
+         <button @click="message += '!'">Ajouter "!"</button>
+         <!-- 
+            Vue fourni également des modificateurs pour les taches
+            communes telles que e.preventDefault()
+          -->
+          <a href="https://vuejs.org" @click.prevent="notify">
+            Un lien avec e.preventDefault()
+          </a>
+    </div>
+
+    <!-- Import Vue -->
+    <script src="../vue.global.js"></script>
+    <script type="module">
+
+        Vue.createApp({
+            data() {
+                return {
+                    message: "Hello World !",
+                }
+            },
+            methods: {
+                reverseMessage() {
+                    this.message = this.message.split('').reverse().join('');
+                },
+
+                notify() {
+                    alert('La navigation vers une autre page a été empêchée');
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

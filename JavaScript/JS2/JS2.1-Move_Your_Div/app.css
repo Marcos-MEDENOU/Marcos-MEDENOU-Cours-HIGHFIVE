@@ -1,0 +1,101 @@
+.container {
+    width: 960px;
+    height: 500px;
+    position: relative;
+}
+.red {
+    background: darkred;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.modal {
+    background: snow;
+    text-align: center;
+    width: 480px;
+    height: 200px;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 240px);
+    display: block;
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-title {
+    padding: 1em;
+    color: white;
+    background: yellowgreen;
+}
+
+.modal-active {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.red1 {
+    background: darkred;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    animation: moove 5s;
+}
+
+.red2 {
+    background: darkred;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    animation: moove 5s;
+}
+
+.red3 {
+    background: darkred;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+/* @keyframes moove {
+    0%{
+        transform: translateX(600px);
+    }
+
+    50%{
+        bottom: 0;
+        transform: translateY(300px);
+    }
+
+    75%{
+        transform: translateX(-100px);
+    }
+
+    100%{
+        transform: translateY(100px);
+    }
+} */
+
+/* .moove_to_right{
+    transform: translateX(600px);
+}
+
+.moove_to_bottom{
+    bottom: 100px;
+    transform: translateY(-200px);
+}
+/* .moove_to_left{
+    transform: translateX(-100px);
+}
+
+.moove_to_top{
+    transform: translateX(200px);
+} */ 

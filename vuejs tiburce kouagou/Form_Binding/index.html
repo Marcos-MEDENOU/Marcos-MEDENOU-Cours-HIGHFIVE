@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Binding</title>
+</head>
+<body>
+    <div id="app">
+        <h2>Champ de texte</h2>
+        <input type="text" v-model="text"> {{ text }}
+
+        <h2>Case à cocher</h2>
+        <input type="checkbox" id="checkbox" v-model="checked">
+        <label for="checkbox">Case cochée: {{ checked }}</label>
+
+        <!-- 
+            plusieurs cases à cocher peuvent être liées au même
+            tableau, v-model ou à la même valeur
+         -->
+         <h2>Plusieurs cases à cocher</h2>
+         <input type="checkbox" id="donald" value="Donald" v-model="checkedNames">
+         <label for="donald">Donald</label>
+         <input type="checkbox" id="estelle" value="Estelle" v-model="checkedNames">
+         <label for="estelle">Estelle</label>
+         <input type="checkbox" id="marcos" value="Marcos" v-model="checkedNames">
+         <label for="marcos">Marcos</label>
+         <p>Noms cochés: <pre>{{ checkedNames }}</pre></p>
+        
+         <h2>Radio</h2>
+         <input type="radio" id="one" value="Un" v-model="picked">
+         <label for="one">Un</label>
+         <br>
+         <input type="radio" id="two" value="Deux" v-model="picked">
+         <label for="two">Deux</label>
+         <br>
+         <span>Choix: {{ picked }}</span>
+
+         <h2>Selection</h2>
+         <select v-model="selected">
+            <option disabled value="">Selectionnez une option svp</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+         </select>
+         <span>Selection: {{ selected }}</span>
+
+         <h2>Sélections Multiples</h2>
+         <select v-model="multiSelected" multiple style="width: 100px">
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+         </select>
+         <span>Sélection: {{ multiSelected }}</span>
+    </div>
+
+    <!-- Import Vue -->
+    <script src="../vue.global.js"></script>
+    <script type="module">
+
+        Vue.createApp({
+            data() {
+                return {
+                    text: "",
+                    checked: true,
+                    checkedNames: ['Donald'],
+                    picked: "Deux",
+                    selected: "A",
+                    multiSelected: ['A'],
+                }
+            },
+            methods: {
+                toggleRed() {
+                    this.isRed = !this.isRed;
+                },
+
+                toggleColor() {
+                    this.color = this.color === 'green' ? 'blue' : 'green';
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

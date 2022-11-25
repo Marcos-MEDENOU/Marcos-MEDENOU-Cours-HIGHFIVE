@@ -1,0 +1,33 @@
+
+
+## Lien de téléchargement des icons
+https://fontawesome.com/
+
+## Script à coller dans le HTML
+<script src="https://kit.fontawesome.com/b48549a02e.js" crossorigin="anonymous"></script>
+
+## Liste des icons
+
+# RSS
+<i class="fas fa-rss"></i>
+
+# Facebook
+<i class="fab fa-facebook"></i>
+
+# YouTube
+<i class="fab fa-youtube"></i>
+
+# Instagram
+.section_end_block
+
+# Book
+<i class="fas fa-book"></i>
+
+# Shoppin cart
+<i class="fas fa-shopping-cart"></i>
+
+# Key
+<i class="fas fa-key"></i>
+
+# Check Mark
+<i class="fas fa-check"></i>

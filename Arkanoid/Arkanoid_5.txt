@@ -1,0 +1,9 @@
+★ Projet - Arkanoid 5
+Start Arkanoid Game
+Enfin on va pouvoir jouer !
+
+On va rajouter une brique sur le plateau de Jeu. Si la balle percute la brique elle disparait !
+
+On peut aussi ajouter 2 briques... 3... 4...
+
+Comment on va pouvoir gérer ça ?

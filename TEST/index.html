@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="myList"></ul>
+    <script>
+       let myList = document.querySelector('#myList');
+
+
+class TodoList{
+    constructor(element){
+        this.listElement = element;
+        this.textList = [];
+    }
+
+    static createListItem(text){
+            let li = document.createElement('li'); 
+            li.innerHTML = text;
+            let bouton = document.createElement("button");
+            bouton.innerHTML = 'X';
+            bouton.className = "suppr";
+            li.append(bouton)
+            // span.className = "close";
+            return li;
+        }
+
+    update(){
+        let allLi = document.querySelectorAll('li');
+
+        allLi.forEach(tagLi => tagLi.remove());
+        console.log(allLi);
+        this.textList.forEach(el => {
+            this.listElement.append(TodoList.createListItem(el));
+           
+        }); 
+    }
+
+    add(text){
+        this.textList.push(text);
+        this.update();
+    }
+
+    remove(index){
+        this.textList.splice(index, 1);
+        this.update();
+    }
+}
+
+const todoApp = new TodoList(myList);
+
+let myInput = document.querySelector('#myInput');
+let addBtn = document.querySelector('.addBtn');
+
+// addBtn.addEventListener('click', function (events) {
+//     events.preventDefault();
+    
+//     todoApp.add(myInput.value)
+//     myInput.value = ''
+// })
+
+// document.addEventListener('click', function (e) {
+//     let text = e.target.parentElement.innerHTML;
+//     let arr = text.split('<');
+//     let liText = arr[0];
+//     console.log(arr);
+//     console.log(liText);
+
+//     todoApp.textList.forEach(function (el, i) {
+//         if (el === liText) {
+//             todoApp.remove(i);
+//         }
+//     })
+    
+// })
+
+
+console.log(todoApp);
+todoApp.add("Lundi je vais volé des bananes");
+todoApp.add("Mardi je vais au Quartier Général");
+todoApp.add("Mercedi je vais voir la pu**");
+todoApp.add("Jeudi je vais à salle de jeu");
+todoApp.add("Samedi je dois coder le Dark Net");
+todoApp.add("Dimanche je vais à la plage");
+// todoApp.remove(1)
+    </script>
+</body>
+</html>

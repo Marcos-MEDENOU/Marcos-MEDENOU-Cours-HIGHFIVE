@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgb(241, 236, 228);
+    padding: 15px;
+}
+.block_name_store_and_logo{
+    display: flex;
+}
+p{
+    font-weight: 400;
+    font-size: 40px;
+}
+p>span{
+    color: red;
+}
+svg{
+    width: 40px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+input{
+    height: 40px;
+}
+
+input{
+background-color:rgb(37, 36, 36);
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- importation de VueJS dans le projet -->
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.10/dist/vue.js"></script>
+    <title>VueJS</title>
+</head>
+
+<body>
+
+    <!-- Instance racine qui va comporter l'instance de vue.js -->
+    <div id="root">
+        <h1>Todo App</h1>
+        <form action="#">
+            <div><input type="text" name="firstName" placeholder="Votre prénom" v-model="user_firstname"></div>
+            <div><input type="text" name="lastName" placeholder="Votre nom" v-model="user_lastname"></div>
+            <div><input type="number" name="age" placeholder="Votre age" v-model="user_age"></div>
+            <input type="submit" value="Envoyer">
+        </form>
+
+        <p>Prénom: {{user_firstname}}</p>
+        <p>Nom: {{user_lastname}}</p>
+        <p>Age: {{user_age}}</p>
+        <p>fullName: {{fullName}}</p>
+
+        <p>{{test}}</p>
+        <p v-text="test"></p>
+        <p v-html="test"></p>
+    </div>
+
+    <!-- Instance un objet vue qui nous permettra d'avoir toutes les fonctionnalités associés -->
+    <script>
+        const vue = new Vue({
+            // el: "#root", // el==> option utilisée pour lier la div avec l'id app
+            // template: `
+            // <div>
+            //     <h1>Todo App</h1>
+            //     <form action = "#" >
+            //     <input type="text" name="search" id="search" v-model="input">
+            //     <input type="submit" value="Envoyer">
+            //     </form>
+
+            // <p>Valeur de la variable input: {{ input }}</p>
+            // </div>
+
+            // `,
+            /* template ==> option utilisée pour définir le markup (html) de la page.
+                Le template ne doit avoir qu'un seul parent
+            */
+            data: {
+                user_firstname: '',
+                user_lastname: '',
+                user_age: null,
+                test: "<h2>Coco rapé</h2>"
+                // fullName: user_firstname + " " + user_lastname,
+            },
+            /*
+            data ==> option permet de stocker toutes les données que nous voulons (mais très souvent des données utiles dans notre document HTML)
+            */
+        });  // Instancie un objet vue
+
+        
+        vue2.$mount("#root");
+        /**
+            DIRECTIVE VUE ==> c'est un mot clé que l'on écrit dans le html et qui permet de demander à vue d'effectuer des actions précise. La plupart des directives commencent par v- (v de vue).
+            
+
+            v-model: directive qui demande à vue de prendre la valeur dans un champ de saisie et de la stocker dans une variable
+
+            v-text: directive qui demande à vue d'interpoler le texte contenu dans la variable qu'on lui fourni littéralement (sans tenir compte des balises)
+            
+            v-html: directive qui demande à vue d'interpoler le texte contenu dans la variable qu'on lui fourni tout en considérant les tags
+        */
+    </script>
+
+
+</body>
+
+</html>

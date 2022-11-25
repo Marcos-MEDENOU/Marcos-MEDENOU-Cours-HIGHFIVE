@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://e.3wa.fr/mod/page/view.php?id=160528&forceview=1 -->
+<html dir="ltr" lang="fr" xml:lang="fr" class="yui3-js-enabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Développement BST09 - Janvier 2022: 02. Formulaires</title>
+        <link rel="shortcut icon" href="https://e.3wa.fr/pluginfile.php/1/theme_moove/favicon/1599206075/favicon.ico">
+        
+<meta name="keywords" content="moodle, Développement BST09 - Janvier 2022: 02. Formulaires">
+<link rel="stylesheet" type="text/css" href="./02. Formulaires_files/combo"><script async="" src="./02. Formulaires_files/analytics.js.téléchargement"></script><script charset="utf-8" id="yui_3_17_2_1_1668674047202_8" src="./02. Formulaires_files/combo(1)" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1668674047202_19" src="./02. Formulaires_files/combo(2)" async=""></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="./02. Formulaires_files/styles.php">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/e.3wa.fr","sesskey":"9sqA9cNzp4","sessiontimeout":"14400","themerev":"1599206075","slasharguments":1,"theme":"moove","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1599206075","admin":"admin","svgicons":true,"usertimezone":"Europe\/Paris","contextid":198438,"langrev":1668654243,"templaterev":"1599206075"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/e.3wa.fr\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/e.3wa.fr\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/e.3wa.fr\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/e.3wa.fr\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/e.3wa.fr\/theme\/yui_combo.php?m\/1599206075\/","combine":true,"comboBase":"https:\/\/e.3wa.fr\/theme\/yui_combo.php?","ext":false,"root":"m\/1599206075\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/e.3wa.fr\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/e.3wa.fr\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1599206075\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/e.3wa.fr\/lib\/javascript.php\/1599206075\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/e.3wa.fr\/lib\/javascript.php\/1599206075\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.8\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40931321-7', 'auto');
+  ga('send', 'pageview');
+
+</script>
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    
+        <link href="./02. Formulaires_files/css" rel="stylesheet">
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="core/first" src="./02. Formulaires_files/requirejs.php"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    config: ["Accessible.js", "Safe.js"],
+    errorSettings: { message: ["!"] },
+    skipStartupTypeset: true,
+    messageStyle: "none"
+});
+</script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="./02. Formulaires_files/javascript.php"></script></head>
+    
+    <body id="page-mod-page-view" class="format-topcoll path-mod path-mod-page chrome dir-ltr lang-fr yui-skin-sam yui3-skin-sam e-3wa-fr pagelayout-incourse course-2009 context-198438 cmid-160528 category-702 jsenabled scrolled">
+    
+
+<div id="accessibilitybar" class="fixed-top">
+    <div class="container">
+        <div class="bars">
+            <div class="fontsize">
+                <span>Corps de la police de caractères</span>
+                <ul>
+                    <li><a class="btn btn-default" data-action="decrease" title="Diminuer le corps de la police de caractères" id="fontsize_dec">A-</a></li>
+                    <li><a class="btn btn-default disabled" data-action="reset" title="Réinitialiser le corps de la police de caractères" id="fontsize_reset">A</a></li>
+                    <li><a class="btn btn-default" data-action="increase" title="Augmenter le corps de la police de caractères" id="fontsize_inc">A+</a></li>
+                </ul>
+            </div>
+            <div class="sitecolor">
+                <span>Couleur du site</span>
+                <ul>
+                    <li><a class="btn btn-default" data-action="reset" title="Réinitialiser la couleur du site" id="sitecolor_color1">R</a></li>
+                    <li><a class="btn btn-default" data-action="sitecolor-color-2" title="Faible contraste 1" id="sitecolor_color2">A</a></li>
+                    <li><a class="btn btn-default" data-action="sitecolor-color-3" title="Faible contraste 2" id="sitecolor_color3">A</a></li>
+                    <li><a class="btn btn-default" data-action="sitecolor-color-4" title="Contraste élevé" id="sitecolor_color4">A</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="fixed-top navbar navbar-light navbar-expand moodle-has-zindex">
+        <div data-region="drawer-toggle" class="d-inline-block mr-3 drawer-toggle">
+            <button aria-expanded="false" aria-controls="nav-drawer" type="button" class="btn nav-link float-sm-left mr-1" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav"><i class="slicon-menu"></i><span class="sr-only">Panneau latéral</span></button>
+        </div>
+
+    <a href="https://e.3wa.fr/" class="navbar-brand has-logo
+            ">
+            <span class="logo d-none d-sm-inline">
+                <img src="./02. Formulaires_files/3wa-logo.png" alt="3WA">
+            </span>
+    </a>
+
+    <ul class="navbar-nav d-none d-md-flex custom-menus">
+        <!-- custom_menu -->
+        <li class="nav-item"><a class="nav-link" href="https://3wa.fr/" title="Formation Développeur Intégrateur Web">3W Academy</a></li><li class="nav-item"><a class="nav-link" href="https://3wa.fr/inscription-a-la-prochaine-reunion-dinformation-porte-ouverte/" title="Information Gratuite sur le Métier de Développeur Web">Contact</a></li><li class="nav-item"><a class="nav-link" href="https://apprendre-html.3wa.fr/" title="Apprendre Gratuitement HTML et CSS">Cours en Ligne</a></li>
+        <!-- page_heading_menu -->
+        
+    </ul>
+    <ul class="nav navbar-nav ml-auto">
+        <div class="d-none d-lg-block">
+            
+        </div>
+
+        <li class="nav-item lang-menu">
+            
+        </li>
+
+        <div class="popover-region collapsed popover-region-notifications" id="nav-notification-popover-container" data-userid="7576" data-region="popover-region">
+    <div class="popover-region-toggle nav-link" data-region="popover-region-toggle" role="button" aria-controls="popover-region-container-6375f1fec2fe56375f1fec22982" aria-haspopup="true" aria-label="Afficher la fenêtre des notifications sans nouvelle notification" tabindex="0">
+                <i class="slicon-bell" title="Ouvrir/fermer le menu notifications"></i>
+        <div class="count-container hidden" data-region="count-container">0</div>
+
+    </div>
+    <div id="popover-region-container-6375f1fec2fe56375f1fec22982" class="popover-region-container" data-region="popover-region-container" aria-expanded="false" aria-hidden="true" aria-label="Fenêtre de notification" role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notifications</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <div class="hover-tooltip-container">
+                    <a class="mark-all-read-button" href="https://e.3wa.fr/mod/page/view.php?id=160528&amp;forceview=1#" title="Tout marquer comme lu" data-action="mark-all-read" role="button">
+                    <span class="normal-icon"><i class="slicon-check" alt="Tout marquer comme lu"></i></span>
+                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+                </a>
+
+    <div class="hover-tooltip">
+        Tout marquer comme lu
+    </div>
+</div>
+        <div class="hover-tooltip-container">
+                    <a href="https://e.3wa.fr/message/notificationpreferences.php?userid=7576" title="Préférences de notification">
+                    <i class="slicon-settings" alt="Préférences de notification"></i>
+                </a>
+
+    <div class="hover-tooltip">
+        Préférences de notification
+    </div>
+</div>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="all-notifications" data-region="all-notifications" role="log" aria-busy="false" aria-atomic="false" aria-relevant="additions"></div>
+        <div class="empty-message" tabindex="0" data-region="empty-message">Vous n'avez pas de notification</div>
+
+            </div>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+        </div>
+                <a class="see-all-link" href="https://e.3wa.fr/message/output/popup/notifications.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">Tout afficher</div>
+                    </div>
+                </a>
+    </div>
+</div><div class="popover-region collapsed" data-region="popover-region-messages">
+    <a id="message-drawer-toggle-6375f1fec39326375f1fec22983" class="nav-link d-inline-block popover-region-toggle position-relative" href="https://e.3wa.fr/mod/page/view.php?id=160528&amp;forceview=1#" role="button">
+        <i class="icon fa fa-comment fa-fw " title="Ouvrir/fermer le tiroir des messages" aria-label="Ouvrir/fermer le tiroir des messages"></i>
+        <div class="count-container hidden" data-region="count-container" aria-label="Il y a 0 conversations non lues">0</div>
+    </a>
+    <span class="sr-only sr-only-focusable" data-region="jumpto" tabindex="-1"></span></div>
+
+        <li class="usermenu"><div class="action-menu moodle-actionmenu nowrap-items d-inline" id="action-menu-1" data-enhance="moodle-core-actionmenu">
+
+        <div class="menubar d-flex " id="action-menu-1-menubar" role="menubar">
+
+            
+
+
+                <div class="action-menu-trigger">
+                    <div class="dropdown">
+                        <a href="https://e.3wa.fr/mod/page/view.php?id=160528&amp;forceview=1#" tabindex="0" class="d-inline-block  dropdown-toggle icon-no-margin" id="action-menu-toggle-1" aria-label="" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="action-menu-1-menu">
+                            
+                            <span class="userbutton"><span class="usertext"></span><span class="avatars"><span class="avatar current"><img src="./02. Formulaires_files/f2.png" class="userpicture defaultuserpic" width="35" height="35" aria-hidden="true"></span></span></span>
+                                
+                            <b class="caret"></b>
+                        </a>
+                            <div class="dropdown-menu dropdown-menu-right menu  align-tr-br" id="action-menu-1-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-1" role="menu" data-align="tr-br">
+                                        <a href="https://e.3wa.fr/user/profile.php?id=7576" class="dropdown-item text-username menu-action" role="menuitem" aria-labelledby="actionmenuaction-1">
+                                                <i class="icon fa fa-user fa-fw " title="Tiburce Kouagou" aria-label="Tiburce Kouagou"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-1">
+                                                Tiburce Kouagou
+                                            </span>
+                                        </a>
+                                        <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+                                        <a href="https://e.3wa.fr/my/" class="dropdown-item menu-action" role="menuitem" data-title="mymoodle,admin" aria-labelledby="actionmenuaction-2">
+                                                <i class="icon fa fa-tachometer fa-fw " title="Tableau de bord" aria-label="Tableau de bord"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-2">
+                                                Tableau de bord
+                                            </span>
+                                        </a>
+                                        <a href="https://e.3wa.fr/user/profile.php?id=7576" class="dropdown-item menu-action" role="menuitem" data-title="profile,moodle" aria-labelledby="actionmenuaction-3">
+                                                <i class="icon fa fa-user fa-fw " title="Profil" aria-label="Profil"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-3">
+                                                Profil
+                                            </span>
+                                        </a>
+                                        <a href="https://e.3wa.fr/grade/report/overview/index.php" class="dropdown-item menu-action" role="menuitem" data-title="grades,grades" aria-labelledby="actionmenuaction-4">
+                                                <i class="icon fa fa-table fa-fw " title="Notes" aria-label="Notes"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-4">
+                                                Notes
+                                            </span>
+                                        </a>
+                                        <a href="https://e.3wa.fr/message/index.php" class="dropdown-item menu-action" role="menuitem" data-title="messages,message" aria-labelledby="actionmenuaction-5">
+                                                <i class="icon fa fa-comment fa-fw " title="Messages personnels" aria-label="Messages personnels"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-5">
+                                                Messages personnels
+                                            </span>
+                                        </a>
+                                        <a href="https://e.3wa.fr/user/preferences.php" class="dropdown-item menu-action" role="menuitem" data-title="preferences,moodle" aria-labelledby="actionmenuaction-6">
+                                                <i class="icon fa fa-wrench fa-fw " title="Préférences" aria-label="Préférences"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-6">
+                                                Préférences
+                                            </span>
+                                        </a>
+                                        <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+                                        <a href="https://e.3wa.fr/login/logout.php?sesskey=9sqA9cNzp4" class="dropdown-item menu-action" role="menuitem" data-title="logout,moodle" aria-labelledby="actionmenuaction-7">
+                                                <i class="icon fa fa-sign-out fa-fw " title="Déconnexion" aria-label="Déconnexion"></i>
+                                            <span class="menu-action-text" id="actionmenuaction-7">
+                                                Déconnexion
+                                            </span>
+                                        </a>
+                            </div>
+                    </div>
+                </div>
+
+        </div>
+
+</div></li>
+    </ul>
+</nav>
+    
+    <div id="page-wrapper">
+    
+        <div>
+    <a class="sr-only sr-only-focusable" href="https://e.3wa.fr/mod/page/view.php?id=160528&amp;forceview=1#maincontent">Passer au contenu principal</a>
+</div><script src="./02. Formulaires_files/javascript(1).php"></script>
+<script src="./02. Formulaires_files/javascript(2).php"></script>
+<script src="./02. Formulaires_files/combo(3)"></script><script src="./02. Formulaires_files/javascript(3).php"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+    <div id="page" class="container-fluid d-print-block">
+        <header id="page-header" class="row">
+    <div class="col-12 pt-3 pb-3">
+        <div class="card ">
+            <div class="card-body ">
+                <div class="d-flex align-items-center">
+                    <div class="mr-auto">
+                        <div class="page-context-header"><div class="page-header-headings"><h1>Développement BST09 - Janvier 2022</h1></div></div>
+                    </div>
+
+                    <div class="header-actions-container flex-shrink-0" data-region="header-actions-container">
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div id="page-navbar">
+                        <nav>
+    <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="https://e.3wa.fr/my/">Tableau de bord</a></li>
+                <li class="breadcrumb-item"><span class="no-link">Mes cours</span></li>
+                <li class="breadcrumb-item"><a href="https://e.3wa.fr/course/index.php?categoryid=702">Promotion BST09 - Janvier 2022</a></li>
+                <li class="breadcrumb-item"><a href="https://e.3wa.fr/course/view.php?id=2009" title="Développement BST09 - Janvier 2022">Développement BST09 - Janvier 2022</a></li>
+                <li class="breadcrumb-item"><span class="no-link">PHP1.2 - 1 jour</span></li>
+                <li class="breadcrumb-item"><a href="https://e.3wa.fr/mod/page/view.php?id=160528" title="Page">02. Formulaires</a></li>
+    </ol>
+</nav>
+                    </div>
+                    <div class="ml-auto d-flex">
+                        
+                    </div>
+                    <div id="course-header">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div id="page-content" class="row pb-3 d-print-block">
+            <div id="region-main-box" class="col-12">
+
+                <section id="region-main">
+                    <div class="card">
+                        <div class="card-body">
+                            <span class="notifications" id="user-notifications"></span>
+                            <div role="main"><span id="maincontent"></span><h2>02. Formulaires</h2><div class="box py-3 generalbox center clearfix"><div class="no-overflow"><p dir="ltr" style="text-align: left;"></p><h2 md-src-pos="0..30">Communiquer avec le serveur</h2><p md-src-pos="32..180"><span md-src-pos="32..59">Il y a plusieurs manières d</span>'<span md-src-pos="60..85">envoyer des requêtes HTTP</span>&nbsp;<span md-src-pos="86..87">à</span>&nbsp;<span md-src-pos="88..103">un serveur web.</span>&nbsp;<span md-src-pos="104..109">On en</span>&nbsp;<span md-src-pos="110..131">connaît bien sûr déjà</span>&nbsp;<span md-src-pos="132..136">une&nbsp;</span>:&nbsp;<span md-src-pos="138..180">entrer une adresse web dans le navigateur.</span></p><p md-src-pos="182..327"><span md-src-pos="182..203">Lors de cette action,</span>&nbsp;<span md-src-pos="204..239">on envoie une requête de la méthode</span>&nbsp;<code md-src-pos="240..245">GET</code>&nbsp;<span md-src-pos="246..257">au serveur.</span>&nbsp;<span md-src-pos="258..299">On lui demande une ressource par son URI,</span>&nbsp;<span md-src-pos="300..327">il nous envoie une réponse.</span></p><blockquote md-src-pos="329..575"><p md-src-pos="331..575"><span md-src-pos="331..403">Ici nous vous renvoyons au lointain cours que nous avions eu au sujet du</span>&nbsp;<span md-src-pos="406..428">fonctionnement du web.</span>&nbsp;<span md-src-pos="429..481">Il sera préférable pour vous de relire rapidement la</span>&nbsp;<span md-src-pos="484..554">partie sur les navigateurs et plus précisément les méthodes HTTP avant</span>&nbsp;<span md-src-pos="557..558">d</span>'<span md-src-pos="559..575">aller plus loin.</span></p></blockquote><p md-src-pos="577..794"><span md-src-pos="577..594">Blablabla méthode</span>&nbsp;<code md-src-pos="595..600">GET</code><span md-src-pos="600..601">,</span>&nbsp;<span md-src-pos="602..607">donc,</span>&nbsp;<span md-src-pos="608..621">disions-nous.</span>&nbsp;<span md-src-pos="622..650">Quand on navigue sur le web,</span>&nbsp;<span md-src-pos="651..709">que ce soit en entrant directement des URI dans la barre d</span>'<span md-src-pos="710..720">adresse ou</span>&nbsp;<span md-src-pos="721..747">en cliquant sur des liens,</span>&nbsp;<span md-src-pos="748..754">pour l</span>'<span md-src-pos="755..787">essentiel on envoie des requêtes</span>&nbsp;<code md-src-pos="788..793">GET</code><span md-src-pos="793..794">.</span></p><p md-src-pos="796..947"><span md-src-pos="796..867">Il existe toutefois une action que vous connaissez très bien qui permet</span>&nbsp;<span md-src-pos="868..869">d</span>'<span md-src-pos="870..921">envoyer des requêtes de toutes les autres méthodes&nbsp;</span>:&nbsp;<span md-src-pos="923..935">soumettre un</span>&nbsp;<span md-src-pos="936..947">formulaire.</span></p><p md-src-pos="949..965"><span md-src-pos="949..965">Détaillons cela.</span></p><h2 md-src-pos="967..1006">Du formulaire HTML au traitement PHP</h2><p md-src-pos="1008..1274"><span md-src-pos="1008..1014">Vous l</span>'<span md-src-pos="1015..1034">avez peut-être déjà</span>&nbsp;<span md-src-pos="1035..1053">vu en intégration,</span>&nbsp;<span md-src-pos="1054..1082">vos formulaires HTML avaient</span>&nbsp;<span md-src-pos="1083..1084">d</span>'<span md-src-pos="1085..1114">étranges attributs que vous n</span>'<span md-src-pos="1115..1146">utilisiez peut-être pas encore&nbsp;</span>:&nbsp;<code md-src-pos="1148..1156">action</code>&nbsp;<span md-src-pos="1157..1159">et</span>&nbsp;<code md-src-pos="1160..1168">method</code><span md-src-pos="1168..1169">.</span>&nbsp;<span md-src-pos="1170..1207">Les champs eux-mêmes avaient aussi un</span>&nbsp;<span md-src-pos="1208..1225">étrange attribut&nbsp;</span>:&nbsp;<code md-src-pos="1227..1233">name</code><span md-src-pos="1233..1234">.</span>&nbsp;<span md-src-pos="1235..1274">Il est temps de vous révéler la vérité.</span></p><pre md-src-pos="1276..1541"><code md-src-pos="1276..1541"><span md-src-pos="1276..1284"></span><span md-src-pos="1284..1327">&lt;form action="/handle-page" method="POST"&gt;</span>
+<span md-src-pos="1327..1405">  &lt;input type="text" name="nickname" placeholder="Entrez votre pseudonyme" /&gt;</span>
+<span md-src-pos="1405..1489">  &lt;input type="password" name="password" placeholder="Entrez votre mot de passe" /&gt;</span>
+<span md-src-pos="1489..1530">  &lt;button type="submit"&gt;Valider&lt;/button&gt;</span>
+<span md-src-pos="1530..1538">&lt;/form&gt;</span>
+<span md-src-pos="1538..1539"></span><span md-src-pos="1538..1541"></span></code></pre><p md-src-pos="1543..1693"><span md-src-pos="1543..1573">Quand on valide un formulaire,</span>&nbsp;<span md-src-pos="1574..1607">on envoie une requête au serveur.</span>&nbsp;<span md-src-pos="1608..1619">Une requête</span>&nbsp;<span md-src-pos="1620..1625">HTTP,</span>&nbsp;<span md-src-pos="1626..1627">c</span>'<span md-src-pos="1628..1632">est,</span>&nbsp;<span md-src-pos="1633..1664">pour ce qui nous intéresse ici&nbsp;</span>:&nbsp;<span md-src-pos="1666..1693">une adresse et des données.</span></p><p md-src-pos="1695..1926"><span md-src-pos="1695..1696">L</span>'<span md-src-pos="1697..1704">adresse</span>&nbsp;<span md-src-pos="1705..1706">à</span>&nbsp;<span md-src-pos="1707..1770">laquelle le formulaire va envoyer la requête est spécifiée dans</span>&nbsp;<span md-src-pos="1771..1772">l</span>'<span md-src-pos="1773..1781">attribut</span>&nbsp;<code md-src-pos="1782..1790">action</code><span md-src-pos="1790..1791">.</span>&nbsp;<span md-src-pos="1792..1830">Ici nous avons mis une adresse fictive</span>&nbsp;<code md-src-pos="1831..1845">/handle-page</code><span md-src-pos="1845..1846">,</span>&nbsp;<span md-src-pos="1847..1881">qui est une URL relative indiquant</span>&nbsp;<span md-src-pos="1882..1893">«&nbsp;le chemin</span>&nbsp;<code md-src-pos="1894..1908">/handle-page</code>&nbsp;<span md-src-pos="1909..1910">à</span>&nbsp;<span md-src-pos="1911..1917">partir</span>&nbsp;<span md-src-pos="1918..1919">d</span>'<span md-src-pos="1920..1926">ici&nbsp;».</span></p><blockquote md-src-pos="1928..2270"><p md-src-pos="1930..2270"><span md-src-pos="1930..1931">L</span>'<span md-src-pos="1932..1940">attribut</span>&nbsp;<code md-src-pos="1941..1949">action</code>&nbsp;<span md-src-pos="1950..1951">n</span>'<span md-src-pos="1952..1972">est pas obligatoire.</span>&nbsp;<span md-src-pos="1973..1980">Si on l</span>'<span md-src-pos="1981..1986">omet,</span>&nbsp;<span md-src-pos="1987..2000">le formulaire</span>&nbsp;<span md-src-pos="2003..2020">envoie la requête</span>&nbsp;<span md-src-pos="2021..2022">à</span>&nbsp;<span md-src-pos="2023..2051">la même adresse que celle où</span>&nbsp;<span md-src-pos="2052..2065">il se trouve.</span>&nbsp;<span md-src-pos="2066..2067">C</span>'<span md-src-pos="2068..2071">est</span>&nbsp;<span md-src-pos="2074..2075">d</span>'<span md-src-pos="2076..2117">ailleurs ce qui est le plus souvent fait,</span>&nbsp;<span md-src-pos="2118..2122">et c</span>'<span md-src-pos="2123..2139">est ensuite côté</span>&nbsp;<span md-src-pos="2140..2143">PHP</span>&nbsp;<span md-src-pos="2146..2151">que l</span>'<span md-src-pos="2152..2194">on va déterminer si la requête demandait d</span>'<span md-src-pos="2195..2217">afficher le formulaire</span>&nbsp;<span md-src-pos="2220..2257">vide ou si celui-ci vient justement d</span>'<span md-src-pos="2258..2270">être soumis.</span></p></blockquote><p md-src-pos="2272..2436"><span md-src-pos="2272..2273">L</span>'<span md-src-pos="2274..2282">attribut</span>&nbsp;<code md-src-pos="2283..2291">method</code>&nbsp;<span md-src-pos="2292..2341">spécifie la méthode HTTP qui sera utilisée pour l</span>'<span md-src-pos="2342..2347">envoi</span>&nbsp;<span md-src-pos="2348..2373">de la requête au serveur.</span>&nbsp;<span md-src-pos="2374..2426">Nous allons détailler très vite les deux principales</span>&nbsp;<span md-src-pos="2427..2436">requêtes.</span></p><p md-src-pos="2438..2739"><span md-src-pos="2438..2446">Ensuite,</span>&nbsp;<span md-src-pos="2447..2489">chaque champ va venir remplir la requête d</span>'<span md-src-pos="2490..2516">une donnée supplémentaire.</span>&nbsp;<span md-src-pos="2517..2521">Et l</span>'<span md-src-pos="2522..2530">attribut</span>&nbsp;<code md-src-pos="2531..2537">name</code>&nbsp;<span md-src-pos="2538..2544">est là</span>&nbsp;<span md-src-pos="2545..2563">pour donner un nom</span>&nbsp;<span md-src-pos="2564..2565">à</span>&nbsp;<span md-src-pos="2566..2580">chaque donnée.</span>&nbsp;<span md-src-pos="2581..2592">Vous pouvez</span>&nbsp;<span md-src-pos="2593..2604">imaginer qu</span>'<span md-src-pos="2605..2659">on envoie un tableau associatif de données au serveur,</span>&nbsp;<span md-src-pos="2660..2662">où</span>&nbsp;<span md-src-pos="2663..2669">chaque</span>&nbsp;<span md-src-pos="2670..2715">valeur entrée dans chaque champ sera associée</span>&nbsp;<span md-src-pos="2716..2717">à</span>&nbsp;<span md-src-pos="2718..2721">son</span>&nbsp;<code md-src-pos="2722..2728">name</code>&nbsp;<span md-src-pos="2729..2739">respectif.</span></p><p md-src-pos="2741..2797"><span md-src-pos="2741..2797">Détaillons les méthodes pour mieux comprendre tout cela.</span></p><h2 md-src-pos="2799..2806">POST</h2><p md-src-pos="2808..2847"><span md-src-pos="2808..2819">Considérons</span>&nbsp;<span md-src-pos="2820..2821">à</span>&nbsp;<span md-src-pos="2822..2847">nouveau notre formulaire.</span></p><pre md-src-pos="2849..3092"><code md-src-pos="2849..3092"><span md-src-pos="2849..2857"></span><span md-src-pos="2857..2878">&lt;form method="POST"&gt;</span>
+<span md-src-pos="2878..2956">  &lt;input type="text" name="nickname" placeholder="Entrez votre pseudonyme" /&gt;</span>
+<span md-src-pos="2956..3040">  &lt;input type="password" name="password" placeholder="Entrez votre mot de passe" /&gt;</span>
+<span md-src-pos="3040..3081">  &lt;button type="submit"&gt;Valider&lt;/button&gt;</span>
+<span md-src-pos="3081..3089">&lt;/form&gt;</span>
+<span md-src-pos="3089..3090"></span><span md-src-pos="3089..3092"></span></code></pre><p md-src-pos="3094..3162"><span md-src-pos="3094..3109">Oublions pour l</span>'<span md-src-pos="3110..3119">instant l</span>'<span md-src-pos="3120..3128">attribut</span>&nbsp;<code md-src-pos="3129..3137">action</code><span md-src-pos="3137..3138">,</span>&nbsp;<span md-src-pos="3139..3143">il n</span>'<span md-src-pos="3144..3162">est pas important.</span></p><p md-src-pos="3164..3353"><span md-src-pos="3164..3165">J</span>'<span md-src-pos="3166..3181">entre la valeur</span>&nbsp;<code md-src-pos="3182..3189">Buffy</code>&nbsp;<span md-src-pos="3190..3203">dans le champ</span>&nbsp;<code md-src-pos="3204..3214">nickname</code><span md-src-pos="3214..3215">,</span>&nbsp;<span md-src-pos="3216..3228">et la valeur</span>&nbsp;<code md-src-pos="3229..3240">WilloW123</code>&nbsp;<span md-src-pos="3241..3254">dans le champ</span>&nbsp;<code md-src-pos="3255..3265">password</code><span md-src-pos="3265..3266">.</span>&nbsp;<span md-src-pos="3267..3292">Je soumets le formulaire.</span>&nbsp;<span md-src-pos="3293..3297">Côté</span>&nbsp;<span md-src-pos="3298..3302">PHP,</span>&nbsp;<span md-src-pos="3303..3315">imaginons ce</span>&nbsp;<span md-src-pos="3316..3353">morceau de script sur cette même page</span></p><pre md-src-pos="3355..3506"><code md-src-pos="3355..3506"><span md-src-pos="3355..3362"></span><span md-src-pos="3362..3424">if (isset($_POST['nickname']) &amp;&amp; isset($_POST['password'])) {</span>
+<span md-src-pos="3424..3453">    echo $_POST['nickname'];</span>
+<span md-src-pos="3453..3472">    echo '&lt;br /&gt;';</span>
+<span md-src-pos="3472..3501">    echo $_POST['password'];</span>
+<span md-src-pos="3501..3503">}</span>
+<span md-src-pos="3503..3504"></span><span md-src-pos="3503..3506"></span></code></pre><p md-src-pos="3508..3590"><span md-src-pos="3508..3519">La fonction</span>&nbsp;<code md-src-pos="3520..3527">isset</code>&nbsp;<span md-src-pos="3528..3566">permet simplement de savoir si une clé</span>&nbsp;<span md-src-pos="3567..3581">existe dans un</span>&nbsp;<span md-src-pos="3582..3590">tableau.</span></p><p md-src-pos="3592..3865"><span md-src-pos="3592..3597">Ce qu</span>'<span md-src-pos="3598..3616">il faut noter ici,</span>&nbsp;<span md-src-pos="3617..3618">c</span>'<span md-src-pos="3619..3624">est l</span>'<span md-src-pos="3625..3645">usage de la variable</span>&nbsp;<code md-src-pos="3646..3654">$_POST</code><span md-src-pos="3654..3655">.</span>&nbsp;<span md-src-pos="3656..3657">C</span>'<span md-src-pos="3658..3667">est ce qu</span>'<span md-src-pos="3668..3670">on</span>&nbsp;<span md-src-pos="3671..3682">appelle une</span>&nbsp;<span md-src-pos="3683..3709">«&nbsp;variable superglobale&nbsp;».</span>&nbsp;<span md-src-pos="3710..3741">Il en existe un certain nombre.</span>&nbsp;<span md-src-pos="3742..3745">PHP</span>&nbsp;<span md-src-pos="3746..3768">les déclare pour nous&nbsp;</span>:&nbsp;<span md-src-pos="3770..3771">c</span>'<span md-src-pos="3772..3785">est-à-dire qu</span>'<span md-src-pos="3786..3806">elles existent et qu</span>'<span md-src-pos="3807..3819">on y a accès</span>&nbsp;<span md-src-pos="3820..3865">même si on ne les a pas déclarées nous-mêmes.</span></p><p md-src-pos="3867..4074"><span md-src-pos="3867..3871">En l</span>'<span md-src-pos="3872..3883">occurrence,</span>&nbsp;<code md-src-pos="3884..3892">$_POST</code>&nbsp;<span md-src-pos="3893..3932">est toujours déclarée comme un tableau.</span>&nbsp;<span md-src-pos="3933..3937">Dans</span>&nbsp;<span md-src-pos="3938..3939">n</span>'<span md-src-pos="3940..3964">importe quel script PHP,</span>&nbsp;<span md-src-pos="3965..3996">vous pouvez appeler la variable</span>&nbsp;<code md-src-pos="3997..4005">$_POST</code><span md-src-pos="4005..4006">,</span>&nbsp;<span md-src-pos="4007..4015">si aucun</span>&nbsp;<span md-src-pos="4016..4028">formulaire n</span>'<span md-src-pos="4029..4030">a</span>&nbsp;<span md-src-pos="4031..4034">été</span>&nbsp;<span md-src-pos="4035..4074">soumis elle contiendra un tableau vide.</span></p><p md-src-pos="4076..4280"><span md-src-pos="4076..4094">Si un formulaire a</span>&nbsp;<span md-src-pos="4095..4098">été</span>&nbsp;<span md-src-pos="4099..4121">soumis avec la méthode</span>&nbsp;<code md-src-pos="4122..4128">POST</code><span md-src-pos="4128..4129">,</span>&nbsp;<span md-src-pos="4130..4146">alors le tableau</span>&nbsp;<span md-src-pos="4147..4171">contenu dans la variable</span>&nbsp;<code md-src-pos="4172..4180">$_POST</code>&nbsp;<span md-src-pos="4181..4199">ne sera plus vide.</span>&nbsp;<span md-src-pos="4200..4222">Nous aurons un tableau</span>&nbsp;<span md-src-pos="4223..4280">associatif rempli des valeurs entrées dans le formulaire.</span></p><p md-src-pos="4282..4464"><span md-src-pos="4282..4330">Notre exemple plus haut affichera respectivement</span>&nbsp;<code md-src-pos="4331..4338">Buffy</code>&nbsp;<span md-src-pos="4339..4341">et</span>&nbsp;<code md-src-pos="4342..4353">WilloW123</code><span md-src-pos="4353..4354">.</span>&nbsp;<span md-src-pos="4355..4368">Notre tableau</span>&nbsp;<code md-src-pos="4369..4377">$_POST</code>&nbsp;<span md-src-pos="4378..4420">contiendra exactement les mêmes valeurs qu</span>'<span md-src-pos="4421..4431">un tableau</span>&nbsp;<code md-src-pos="4432..4441">$values</code>&nbsp;<span md-src-pos="4442..4463">dans le code suivant&nbsp;</span>:</p><pre md-src-pos="4466..4568"><code md-src-pos="4466..4568"><span md-src-pos="4466..4473"></span><span md-src-pos="4473..4485">$values = [</span>
+<span md-src-pos="4485..4512">    'nickname' =&gt; 'Buffy',</span>
+<span md-src-pos="4512..4542">    'password' =&gt; 'WilloW123'</span>
+<span md-src-pos="4542..4545">];</span>
+<span md-src-pos="4545..4546"></span>
+<span md-src-pos="4546..4565">var_dump($values);</span>
+<span md-src-pos="4565..4566"></span><span md-src-pos="4565..4568"></span></code></pre><blockquote md-src-pos="4570..4980"><p md-src-pos="4572..4980"><span md-src-pos="4572..4583">La fonction</span>&nbsp;<code md-src-pos="4584..4590">echo</code>&nbsp;<span md-src-pos="4591..4646">est très utile pour afficher des chaînes de caractères.</span>&nbsp;<span md-src-pos="4649..4650">À</span>&nbsp;<span md-src-pos="4651..4689">des fins de debug et de développement,</span>&nbsp;<span md-src-pos="4690..4699">elle peut</span>&nbsp;<span md-src-pos="4700..4721">être un peu limitante</span>&nbsp;<span md-src-pos="4724..4765">pour afficher des valeurs plus complexes,</span>&nbsp;<span md-src-pos="4766..4799">comme des tableaux ou des objets.</span>&nbsp;<span md-src-pos="4802..4814">Dans ce cas,</span>&nbsp;<span md-src-pos="4815..4816">n</span>'<span md-src-pos="4817..4828">hésitez pas</span>&nbsp;<span md-src-pos="4829..4830">à</span>&nbsp;<span md-src-pos="4831..4851">utiliser la fonction</span>&nbsp;<code md-src-pos="4852..4862">var_dump</code><span md-src-pos="4862..4863">.</span>&nbsp;<span md-src-pos="4864..4875">Par exemple</span>&nbsp;<code md-src-pos="4878..4896">var_dump($_POST)</code>&nbsp;<span md-src-pos="4897..4912">dans notre cas.</span>&nbsp;<span md-src-pos="4913..4914">C</span>'<span md-src-pos="4915..4928">est un peu le</span>&nbsp;<code md-src-pos="4929..4942">console.log</code>&nbsp;<span md-src-pos="4943..4950">de PHP.</span>&nbsp;<span md-src-pos="4953..4964">La tester c</span>'<span md-src-pos="4965..4970">est l</span>'<span md-src-pos="4971..4979">adopter&nbsp;</span>!</p></blockquote><h2 md-src-pos="4982..4988">GET</h2><p md-src-pos="4990..5060"><span md-src-pos="4990..5035">La méthode GET fonctionne de la même manière,</span>&nbsp;<span md-src-pos="5036..5037">à</span>&nbsp;<span md-src-pos="5038..5060">deux différences près.</span></p><pre md-src-pos="5062..5305"><code md-src-pos="5062..5305"><span md-src-pos="2849..2857"></span><span md-src-pos="2857..2878">&lt;form method="POST"&gt;</span>
+<span md-src-pos="2878..2956">  &lt;input type="text" name="nickname" placeholder="Entrez votre pseudonyme" /&gt;</span>
+<span md-src-pos="2956..3040">  &lt;input type="password" name="password" placeholder="Entrez votre mot de passe" /&gt;</span>
+<span md-src-pos="3040..3081">  &lt;button type="submit"&gt;Valider&lt;/button&gt;</span>
+<span md-src-pos="3081..3089">&lt;/form&gt;</span>
+<span md-src-pos="3089..3090"></span><span md-src-pos="3089..3092"></span></code></pre><pre md-src-pos="5307..5454"><code md-src-pos="5307..5454"><span md-src-pos="5307..5314"></span><span md-src-pos="5314..5374">if (isset($_GET['nickname']) &amp;&amp; isset($_GET['password'])) {</span>
+<span md-src-pos="5374..5402">    echo $_GET['nickname'];</span>
+<span md-src-pos="5402..5421">    echo '&lt;br /&gt;';</span>
+<span md-src-pos="5421..5449">    echo $_GET['password'];</span>
+<span md-src-pos="5449..5451">}</span>
+<span md-src-pos="5451..5452"></span><span md-src-pos="5451..5454"></span></code></pre><p md-src-pos="5456..5586"><span md-src-pos="5456..5482">La première différence est</span>&nbsp;<span md-src-pos="5483..5492">évidente&nbsp;</span>:&nbsp;<span md-src-pos="5494..5529">les données ne sont pas accessibles</span>&nbsp;<span md-src-pos="5530..5558">via la variable superglobale</span>&nbsp;<code md-src-pos="5559..5567">$_POST</code><span md-src-pos="5567..5568">,</span>&nbsp;<span md-src-pos="5569..5577">mais via</span>&nbsp;<code md-src-pos="5578..5585">$_GET</code><span md-src-pos="5585..5586">.</span></p><p md-src-pos="5588..5817"><span md-src-pos="5588..5639">La deuxième différence est par contre fondamentale.</span>&nbsp;<span md-src-pos="5640..5649">Tandis qu</span>'<span md-src-pos="5650..5661">une requête</span>&nbsp;<code md-src-pos="5662..5668">POST</code>&nbsp;<span md-src-pos="5669..5716">transporte les données de manière transparente,</span>&nbsp;<span md-src-pos="5717..5738">discrètement glissées</span>&nbsp;<span md-src-pos="5739..5760">dans ses métadonnées,</span>&nbsp;<span md-src-pos="5761..5772">une requête</span>&nbsp;<code md-src-pos="5773..5778">GET</code>&nbsp;<span md-src-pos="5779..5812">les transporte directement dans l</span>'<span md-src-pos="5813..5817">URI.</span></p><p md-src-pos="5819..6059"><span md-src-pos="5819..5864">En soumettant le formulaire de notre exemple,</span>&nbsp;<span md-src-pos="5865..5892">notre URI ressemblera alors</span>&nbsp;<span md-src-pos="5893..5894">à</span>&nbsp;<span md-src-pos="5895..5899">ceci</span>&nbsp;:&nbsp;<code md-src-pos="5902..5967">http://localhost/some_project?nickname=Buffy&amp;password=WilloW123</code><span md-src-pos="5967..5968">.</span>&nbsp;<span md-src-pos="5969..6018">Au lieu de transporter les données dans sa poche,</span>&nbsp;<span md-src-pos="6019..6042">la requête se les colle</span>&nbsp;<span md-src-pos="6043..6056">sur le front.</span>&nbsp;(:</p><p md-src-pos="6061..6389"><span md-src-pos="6061..6070">On trouve</span>&nbsp;<span md-src-pos="6071..6072">à</span>&nbsp;<span md-src-pos="6073..6118">la fin de notre adresse un premier séparateur</span>&nbsp;<code md-src-pos="6119..6122">?</code><span md-src-pos="6122..6123">,</span>&nbsp;<span md-src-pos="6124..6131">qui dit</span>&nbsp;<span md-src-pos="6132..6135">«&nbsp;à</span>&nbsp;<span md-src-pos="6136..6144">partir d</span>'<span md-src-pos="6145..6180">ici on trouve les paramètres GET&nbsp;».</span>&nbsp;<span md-src-pos="6181..6198">Puis chaque paire</span>&nbsp;<code md-src-pos="6199..6211">clé=valeur</code>&nbsp;<span md-src-pos="6212..6230">est séparée par un</span>&nbsp;<code md-src-pos="6231..6234">&amp;</code><span md-src-pos="6234..6235">.</span>&nbsp;<span md-src-pos="6236..6285">Le serveur est ensuite capable de les lire et les</span>&nbsp;<span md-src-pos="6286..6295">utiliser.</span>&nbsp;<span md-src-pos="6296..6316">Dans le cas des PHP,</span>&nbsp;<span md-src-pos="6317..6347">on les trouve dans la variable</span>&nbsp;<code md-src-pos="6348..6355">$_GET</code>&nbsp;<span md-src-pos="6356..6360">sous</span>&nbsp;<span md-src-pos="6361..6389">forme de tableau associatif.</span></p><p md-src-pos="6391..6446"><span md-src-pos="6391..6409">Il y a des raisons</span>&nbsp;<span md-src-pos="6410..6411">à</span>&nbsp;<span md-src-pos="6412..6417">cela.</span>&nbsp;<span md-src-pos="6418..6446">Comparons les deux méthodes.</span></p><h2 md-src-pos="6448..6493">Quand utiliser GET&nbsp;? Quand utiliser POST&nbsp;?</h2><p md-src-pos="6495..7203"><span md-src-pos="6495..6513">Philosophiquement,</span>&nbsp;<span md-src-pos="6514..6536">une adresse web est là</span>&nbsp;<span md-src-pos="6537..6565">pour décrire ou demander une</span>&nbsp;<span md-src-pos="6566..6576">ressource.</span>&nbsp;<span md-src-pos="6577..6631">La méthode GET est généralement utilisée pour demander</span>&nbsp;<span md-src-pos="6632..6633">à</span>&nbsp;<span md-src-pos="6634..6638">voir</span>&nbsp;<span md-src-pos="6639..6653">quelque chose,</span>&nbsp;<span md-src-pos="6654..6655">c</span>'<span md-src-pos="6656..6661">est d</span>'<span md-src-pos="6662..6713">ailleurs pour cela que cliquer sur un lien ou aller</span>&nbsp;<span md-src-pos="6714..6725">directement</span>&nbsp;<span md-src-pos="6726..6727">à</span>&nbsp;<span md-src-pos="6728..6766">une adresse déclenche une requête GET.</span>&nbsp;<span md-src-pos="6767..6776">Mais on l</span>'<span md-src-pos="6777..6791">utilise aussi,</span>&nbsp;<span md-src-pos="6792..6804">par exemple,</span>&nbsp;<span md-src-pos="6805..6839">pour les formulaires de recherche.</span>&nbsp;<span md-src-pos="6840..6870">Si vous soumettez la recherche</span>&nbsp;<code md-src-pos="6871..6881">Tiramisu</code>&nbsp;<span md-src-pos="6882..6892">sur Qwant,</span>&nbsp;<span md-src-pos="6893..6908">les résultats s</span>'<span md-src-pos="6909..6925">afficheront et l</span>'<span md-src-pos="6926..6945">adresse ressemblera</span>&nbsp;<span md-src-pos="6946..6947">à</span>&nbsp;<span md-src-pos="6948..6953">ceci&nbsp;</span>:&nbsp;<code md-src-pos="6955..6988">https://www.qwant.fr?q=Tiramisu</code><span md-src-pos="6988..6989">.</span>&nbsp;<span md-src-pos="6990..7013">On peut deviner ici que</span>&nbsp;<code md-src-pos="7014..7017">q</code>&nbsp;<span md-src-pos="7018..7026">signifie</span>&nbsp;<em md-src-pos="7027..7034">query</em><span md-src-pos="7034..7035">.</span>&nbsp;<span md-src-pos="7036..7074">Le serveur de Qwant aura alors utilisé</span>&nbsp;<span md-src-pos="7075..7087">la valeur de</span>&nbsp;<code md-src-pos="7088..7091">q</code>&nbsp;<span md-src-pos="7092..7096">pour</span>&nbsp;<span md-src-pos="7097..7163">faire tourner ses algorithmes de recherche sur sa <a class="autolink" title="Base de données" href="https://e.3wa.fr/mod/resource/view.php?id=160543">base de données</a>,</span>&nbsp;<span md-src-pos="7164..7171">et nous</span>&nbsp;<span md-src-pos="7172..7203">envoyer une réponse appropriée.</span></p><p md-src-pos="7205..7402"><span md-src-pos="7205..7207">Si</span>&nbsp;<code md-src-pos="7208..7213">GET</code>&nbsp;<span md-src-pos="7214..7218">sert</span>&nbsp;<span md-src-pos="7219..7220">à</span>&nbsp;<span md-src-pos="7221..7271">demander au serveur de nous envoyer quelque chose,</span>&nbsp;<code md-src-pos="7272..7278">POST</code>&nbsp;<span md-src-pos="7279..7292">est plutôt là</span>&nbsp;<span md-src-pos="7293..7331">pour envoyer quelque chose au serveur.</span>&nbsp;<span md-src-pos="7332..7345">Un formulaire</span>&nbsp;<span md-src-pos="7346..7347">d</span>'<span md-src-pos="7348..7360">inscription,</span>&nbsp;<span md-src-pos="7361..7373">par exemple,</span>&nbsp;<span md-src-pos="7374..7394">utilisera la méthode</span>&nbsp;<code md-src-pos="7395..7401">POST</code><span md-src-pos="7401..7402">.</span></p><p md-src-pos="7404..7678"><span md-src-pos="7404..7413">Bien sûr,</span>&nbsp;<span md-src-pos="7414..7421">en soi,</span>&nbsp;<span md-src-pos="7422..7461">on peut très bien intervertir les deux.</span>&nbsp;<span md-src-pos="7462..7479">On peut créer des</span>&nbsp;<span md-src-pos="7480..7516">utilisateurs avec un formulaire GET,</span>&nbsp;<span md-src-pos="7517..7553">on peut faire des recherches avec un</span>&nbsp;<span md-src-pos="7554..7570">formulaire POST.</span>&nbsp;<span md-src-pos="7571..7572">C</span>'<span md-src-pos="7573..7615">est avant tout une question de sémantique.</span>&nbsp;<span md-src-pos="7616..7621">Et la</span>&nbsp;<span md-src-pos="7622..7633">sémantique,</span>&nbsp;<span md-src-pos="7634..7648">vous commencez</span>&nbsp;<span md-src-pos="7649..7650">à</span>&nbsp;<span md-src-pos="7651..7661">le savoir,</span>&nbsp;<span md-src-pos="7662..7663">c</span>'<span md-src-pos="7664..7678">est important.</span></p><blockquote md-src-pos="7680..8752"><p md-src-pos="7682..8275"><span md-src-pos="7682..7693">Il existe d</span>'<span md-src-pos="7694..7710">autres méthodes,</span>&nbsp;<span md-src-pos="7711..7716">comme</span>&nbsp;<code md-src-pos="7717..7724">PATCH</code>&nbsp;<span md-src-pos="7725..7727">ou</span>&nbsp;<code md-src-pos="7728..7736">DELETE</code><span md-src-pos="7736..7737">.</span>&nbsp;<span md-src-pos="7738..7751">En théorie il</span>&nbsp;<span md-src-pos="7754..7776">faudrait les utiliser.</span>&nbsp;<code md-src-pos="7777..7785">DELETE</code><span md-src-pos="7785..7786">,</span>&nbsp;<span md-src-pos="7787..7799">par exemple,</span>&nbsp;<span md-src-pos="7800..7830">sert pour un formulaire visant</span>&nbsp;<span md-src-pos="7833..7834">à</span>&nbsp;<span md-src-pos="7835..7859">supprimer une ressource,</span>&nbsp;<span md-src-pos="7860..7900">comme un utilisateur ou une publication.</span>&nbsp;<span md-src-pos="7901..7908">Mais en</span>&nbsp;<span md-src-pos="7911..7920">pratique,</span>&nbsp;<span md-src-pos="7921..7936">la multiplicité</span>&nbsp;<span md-src-pos="7937..7988">des requêtes complexifie beaucoup le développement,</span>&nbsp;<span md-src-pos="7991..8036">aussi la plupart des développeurs se limitent</span>&nbsp;<span md-src-pos="8037..8038">à</span>&nbsp;<code md-src-pos="8039..8044">GET</code>&nbsp;<span md-src-pos="8045..8047">et</span>&nbsp;<code md-src-pos="8048..8054">POST</code>&nbsp;<span md-src-pos="8055..8067">par souci de</span>&nbsp;<span md-src-pos="8070..8081">simplicité.</span>&nbsp;<span md-src-pos="8082..8095">Même Symfony,</span>&nbsp;<span md-src-pos="8096..8097">l</span>'<span md-src-pos="8098..8104">un des</span>&nbsp;<em md-src-pos="8105..8117">frameworks</em>&nbsp;<span md-src-pos="8118..8142">PHP les plus utilisés au</span>&nbsp;<span md-src-pos="8145..8169">monde et objectivement l</span>'<span md-src-pos="8170..8190">un des mieux pensés,</span>&nbsp;<span md-src-pos="8191..8217">ne se fait pas de nœuds au</span>&nbsp;<span md-src-pos="8220..8257">cerveau concernant les méthodes HTTP&nbsp;</span>:&nbsp;<code md-src-pos="8259..8264">GET</code>&nbsp;<span md-src-pos="8265..8267">et</span>&nbsp;<code md-src-pos="8268..8274">POST</code><span md-src-pos="8274..8275">.</span></p><p md-src-pos="8280..8752"><span md-src-pos="8280..8296">Vous concernant,</span>&nbsp;<span md-src-pos="8297..8317">même si vous estimez</span>&nbsp;<span md-src-pos="8318..8352">être un chevalier de la sémantique</span>&nbsp;<span md-src-pos="8355..8365">et rêvez d</span>'<span md-src-pos="8366..8424">utiliser un jour exactement la bonne méthode pour la bonne</span>&nbsp;<span md-src-pos="8427..8435">requête,</span>&nbsp;<span md-src-pos="8436..8465">nous vous recommandons pour l</span>'<span md-src-pos="8466..8487">heure de vous limiter</span>&nbsp;<span md-src-pos="8488..8497">également</span>&nbsp;<span md-src-pos="8500..8501">à</span>&nbsp;<code md-src-pos="8502..8507">GET</code>&nbsp;<span md-src-pos="8508..8510">et</span>&nbsp;<code md-src-pos="8511..8517">POST</code><span md-src-pos="8517..8518">.</span>&nbsp;<span md-src-pos="8519..8529">En vérité,</span>&nbsp;<span md-src-pos="8530..8561">dans votre vie professionnelle,</span>&nbsp;<span md-src-pos="8562..8575">vous ne serez</span>&nbsp;<span md-src-pos="8578..8584">amenés</span>&nbsp;<span md-src-pos="8585..8586">à</span>&nbsp;<span md-src-pos="8587..8653">véritablement respecter la sémantique exacte des méthodes HTTP que</span>&nbsp;<span md-src-pos="8656..8695">lorsque vous développerez des API REST,</span>&nbsp;<span md-src-pos="8696..8732">chose que vous ne ferez probablement</span>&nbsp;<span md-src-pos="8735..8738">pas</span>&nbsp;<span md-src-pos="8739..8740">à</span>&nbsp;<span md-src-pos="8741..8752">vos débuts.</span></p></blockquote><br><p></p></div></div><div class="modified">Modifié le: lundi 3 mai 2021, 13:11</div></div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="card activity-navigation">
+    <div class="card-body">
+        <div class="row">
+    <div class="col-md-4">                <div id="prev-activity" class="float-left">
+                        <span class="nav-guide">
+                            Activité précédente
+                        </span>
+                            <a href="https://e.3wa.fr/mod/page/view.php?id=160527&amp;forceview=1" id="prev-activity-link" class="btn btn-link" title="01. require">◄ 01. require</a>
+                </div>
+</div>
+    <div class="col-md-4">                <div class="mdl-align">
+                    <div class="urlselect">
+    <form method="post" action="https://e.3wa.fr/course/jumpto.php" class="form-inline" id="url_select_f6375f1fec229813">
+        <input type="hidden" name="sesskey" value="9sqA9cNzp4">
+            <label for="jump-to-activity" class="sr-only">
+                Aller à…
+            </label>
+        <select id="jump-to-activity" class="custom-select urlselect" name="jump">
+                    <option value="" selected="">Aller à…</option>
+                    <option value="/mod/url/view.php?id=160343&amp;forceview=1">Signer la feuille de présence</option>
+                    <option value="/mod/resource/view.php?id=160344&amp;forceview=1">3WA Règlement Intérieur 2020 Covid</option>
+                    <option value="/mod/url/view.php?id=160345&amp;forceview=1">Accéder à mon environnement en ligne</option>
+                    <option value="/mod/url/view.php?id=160346&amp;forceview=1">Planning de la Session</option>
+                    <option value="/mod/url/view.php?id=160347&amp;forceview=1">Activez votre accès premium gratuit à https://apprendre-html.3wa.fr/</option>
+                    <option value="/mod/url/view.php?id=160348&amp;forceview=1">Forum de la 3W Academy</option>
+                    <option value="/mod/url/view.php?id=160349&amp;forceview=1">Autorisation de droit à l'image</option>
+                    <option value="/mod/page/view.php?id=160353&amp;forceview=1">01. Intro</option>
+                    <option value="/mod/page/view.php?id=160355&amp;forceview=1">02. Web</option>
+                    <option value="/mod/page/view.php?id=160357&amp;forceview=1">03. Navigateurs</option>
+                    <option value="/mod/page/view.php?id=160359&amp;forceview=1">04. Javascript</option>
+                    <option value="/mod/page/view.php?id=160361&amp;forceview=1">05. Instructions</option>
+                    <option value="/mod/url/view.php?id=160362&amp;forceview=1">★ Exercice - Hello World</option>
+                    <option value="/mod/url/view.php?id=160363&amp;forceview=1">► Correction - Hello World</option>
+                    <option value="/mod/page/view.php?id=160365&amp;forceview=1">06. Variables</option>
+                    <option value="/mod/url/view.php?id=160366&amp;forceview=1">★ Exercice - Color</option>
+                    <option value="/mod/url/view.php?id=160367&amp;forceview=1">► Correction - Color</option>
+                    <option value="/mod/url/view.php?id=160368&amp;forceview=1">★ Exercice - Message</option>
+                    <option value="/mod/url/view.php?id=160369&amp;forceview=1">► Correction - Message</option>
+                    <option value="/mod/page/view.php?id=160371&amp;forceview=1">07. Types</option>
+                    <option value="/mod/url/view.php?id=160372&amp;forceview=1">★ Exercice - String</option>
+                    <option value="/mod/url/view.php?id=160373&amp;forceview=1">► Correction - String</option>
+                    <option value="/mod/page/view.php?id=160375&amp;forceview=1">08. Opérateurs</option>
+                    <option value="/mod/url/view.php?id=160376&amp;forceview=1">★ Exercice - Coordonnées</option>
+                    <option value="/mod/page/view.php?id=160379&amp;forceview=1">09. projet - hello you</option>
+                    <option value="/mod/url/view.php?id=160380&amp;forceview=1">→ Projet - Calculatrice</option>
+                    <option value="/mod/page/view.php?id=160385&amp;forceview=1">01. Conditions</option>
+                    <option value="/mod/page/view.php?id=160387&amp;forceview=1">02. Comparaisons</option>
+                    <option value="/mod/page/view.php?id=160389&amp;forceview=1">03. if</option>
+                    <option value="/mod/page/view.php?id=160391&amp;forceview=1">04. projet - calculaprompt</option>
+                    <option value="/mod/url/view.php?id=160392&amp;forceview=1">→ Projet - Calcula Prompt</option>
+                    <option value="/mod/page/view.php?id=160397&amp;forceview=1">05. Bouches (while)</option>
+                    <option value="/mod/page/view.php?id=160399&amp;forceview=1">06. Et ou</option>
+                    <option value="/mod/page/view.php?id=160401&amp;forceview=1">7. projet - calculawrite</option>
+                    <option value="/mod/url/view.php?id=160402&amp;forceview=1">→ Projet - Calcula Write</option>
+                    <option value="/mod/page/view.php?id=160408&amp;forceview=1">01. Tableaux</option>
+                    <option value="/mod/url/view.php?id=160409&amp;forceview=1">★ Exercice - Colors</option>
+                    <option value="/mod/url/view.php?id=160410&amp;forceview=1">► Correction - Colors</option>
+                    <option value="/mod/url/view.php?id=160411&amp;forceview=1">★ Exercice - Colors2</option>
+                    <option value="/mod/url/view.php?id=160412&amp;forceview=1">► Correction - Colors2</option>
+                    <option value="/mod/page/view.php?id=160414&amp;forceview=1">02. for</option>
+                    <option value="/mod/page/view.php?id=160416&amp;forceview=1">03. Plus de types</option>
+                    <option value="/mod/page/view.php?id=160418&amp;forceview=1">04. Fonctions</option>
+                    <option value="/mod/page/view.php?id=160420&amp;forceview=1">05. Objets</option>
+                    <option value="/mod/page/view.php?id=160422&amp;forceview=1">6. projet - discount</option>
+                    <option value="/mod/url/view.php?id=160423&amp;forceview=1">★ Projet - Discount</option>
+                    <option value="/mod/page/view.php?id=160427&amp;forceview=1">Les sélecteurs</option>
+                    <option value="/mod/url/view.php?id=160428&amp;forceview=1">★ Exercice - Move Your Div</option>
+                    <option value="/mod/page/view.php?id=160430&amp;forceview=1">Les timers</option>
+                    <option value="/mod/url/view.php?id=160431&amp;forceview=1">Exemples</option>
+                    <option value="/mod/url/view.php?id=160432&amp;forceview=1">★ Exercice - Chronomètre</option>
+                    <option value="/mod/url/view.php?id=160433&amp;forceview=1">► Correction - Chronomètre</option>
+                    <option value="/mod/url/view.php?id=160434&amp;forceview=1">► Correction - Chronomètre Bonus 1</option>
+                    <option value="/mod/url/view.php?id=160435&amp;forceview=1">► Correction - Chronomètre Bonus 2</option>
+                    <option value="/mod/url/view.php?id=160436&amp;forceview=1">★ Exercice - StartArkanoid</option>
+                    <option value="/mod/url/view.php?id=160437&amp;forceview=1">► Correction - StartArkanoid Bonus 1</option>
+                    <option value="/mod/url/view.php?id=160438&amp;forceview=1">► Correction - StartArkanoid Bonus 2</option>
+                    <option value="/mod/url/view.php?id=160439&amp;forceview=1">★ Exercice - ZombieLand</option>
+                    <option value="/mod/url/view.php?id=160440&amp;forceview=1">► Correction - ZombieLand</option>
+                    <option value="/mod/url/view.php?id=160441&amp;forceview=1">★ Exercice - Rocket</option>
+                    <option value="/mod/url/view.php?id=160442&amp;forceview=1">► Correction - Rocket</option>
+                    <option value="/mod/page/view.php?id=160443&amp;forceview=1">Canvas</option>
+                    <option value="/mod/page/view.php?id=160444&amp;forceview=1">★ Exercice - Dessiner un rectangle</option>
+                    <option value="/mod/url/view.php?id=160445&amp;forceview=1">★ Exercice - Dessiner un rectangle</option>
+                    <option value="/mod/page/view.php?id=160447&amp;forceview=1">★ Exercice - Ecrire du Texte</option>
+                    <option value="/mod/url/view.php?id=160448&amp;forceview=1">★ Exercice - Ecrire du Texte</option>
+                    <option value="/mod/page/view.php?id=160450&amp;forceview=1">★ Exercice - Incruster une image</option>
+                    <option value="/mod/url/view.php?id=160451&amp;forceview=1">★ Exercice - Incruster une image</option>
+                    <option value="/mod/page/view.php?id=160453&amp;forceview=1">★ Exercice - Animer avec clavier</option>
+                    <option value="/mod/url/view.php?id=160454&amp;forceview=1">★ Exercice - Animer avec clavier</option>
+                    <option value="/mod/page/view.php?id=160457&amp;forceview=1">★ Projet - Arkanoid 1</option>
+                    <option value="/mod/url/view.php?id=160458&amp;forceview=1">► Correction - Arkanoid 1</option>
+                    <option value="/mod/page/view.php?id=160459&amp;forceview=1">★ Projet - Arkanoid 2</option>
+                    <option value="/mod/url/view.php?id=160460&amp;forceview=1">► Correction - Arkanoid 2</option>
+                    <option value="/mod/page/view.php?id=160461&amp;forceview=1">★ Projet - Arkanoid 3</option>
+                    <option value="/mod/url/view.php?id=160462&amp;forceview=1">► Correction - Arkanoid 3</option>
+                    <option value="/mod/page/view.php?id=160463&amp;forceview=1">★ Projet - Arkanoid 4</option>
+                    <option value="/mod/url/view.php?id=160464&amp;forceview=1">► Correction - Arkanoid 4</option>
+                    <option value="/mod/page/view.php?id=160465&amp;forceview=1">★ Projet - Arkanoid 5</option>
+                    <option value="/mod/url/view.php?id=160466&amp;forceview=1">► Correction - Arkanoid 5</option>
+                    <option value="/mod/page/view.php?id=160467&amp;forceview=1">★ Projet - Arkanoid 6</option>
+                    <option value="/mod/page/view.php?id=160468&amp;forceview=1">1. Les classes</option>
+                    <option value="/mod/url/view.php?id=160469&amp;forceview=1">★ Exercice - Inputs</option>
+                    <option value="/mod/url/view.php?id=160470&amp;forceview=1">► Correction - Inputs</option>
+                    <option value="/mod/page/view.php?id=160471&amp;forceview=1">2. Les modules </option>
+                    <option value="/mod/page/view.php?id=160472&amp;forceview=1">3. L'héritage</option>
+                    <option value="/mod/url/view.php?id=160473&amp;forceview=1">★ Exercice - Admin</option>
+                    <option value="/mod/url/view.php?id=160474&amp;forceview=1">► Correction - Admin</option>
+                    <option value="/mod/page/view.php?id=160475&amp;forceview=1">4. Les accesseurs</option>
+                    <option value="/mod/url/view.php?id=160476&amp;forceview=1">★ Exercice - Job</option>
+                    <option value="/mod/url/view.php?id=160477&amp;forceview=1">► Correction - Job</option>
+                    <option value="/mod/page/view.php?id=160478&amp;forceview=1">5. Le constructeur</option>
+                    <option value="/mod/url/view.php?id=160479&amp;forceview=1">★ Exercice - Anonymous</option>
+                    <option value="/mod/url/view.php?id=160480&amp;forceview=1">► Correction - Anonymous</option>
+                    <option value="/mod/page/view.php?id=160481&amp;forceview=1">6. La composition</option>
+                    <option value="/mod/url/view.php?id=160482&amp;forceview=1">★ Exercice - Age de Pierre</option>
+                    <option value="/mod/url/view.php?id=160483&amp;forceview=1">► Correction - Age de Pierre</option>
+                    <option value="/mod/page/view.php?id=160484&amp;forceview=1">7. Les prototypes</option>
+                    <option value="/mod/url/view.php?id=160485&amp;forceview=1">★ Exercice - Et les prototypes ?</option>
+                    <option value="/mod/url/view.php?id=160486&amp;forceview=1">► Correction - Et les prototypes ?</option>
+                    <option value="/mod/url/view.php?id=160487&amp;forceview=1">★ Projet - SuperForm</option>
+                    <option value="/mod/url/view.php?id=160488&amp;forceview=1">► Correction - SuperForm</option>
+                    <option value="/mod/page/view.php?id=160489&amp;forceview=1">0. Vue Instance</option>
+                    <option value="/mod/page/view.php?id=160490&amp;forceview=1">1. Data Binding</option>
+                    <option value="/mod/url/view.php?id=160491&amp;forceview=1">★ Exercice - BindMe</option>
+                    <option value="/mod/url/view.php?id=160492&amp;forceview=1">► Correction - BindMe</option>
+                    <option value="/mod/page/view.php?id=160493&amp;forceview=1">2. List Rendering</option>
+                    <option value="/mod/url/view.php?id=160494&amp;forceview=1">★ Exercice - ListMe</option>
+                    <option value="/mod/url/view.php?id=160495&amp;forceview=1">► Correction - ListMe</option>
+                    <option value="/mod/page/view.php?id=160496&amp;forceview=1">3. Component</option>
+                    <option value="/mod/url/view.php?id=160497&amp;forceview=1">★ Exercice - Component</option>
+                    <option value="/mod/url/view.php?id=160498&amp;forceview=1">► Correction - Component</option>
+                    <option value="/mod/page/view.php?id=160499&amp;forceview=1">4. Event Handling</option>
+                    <option value="/mod/url/view.php?id=160500&amp;forceview=1">★ Exercice - Event Handling</option>
+                    <option value="/mod/page/view.php?id=160501&amp;forceview=1">5. Conditionals</option>
+                    <option value="/mod/url/view.php?id=160502&amp;forceview=1">★ Exercice - Conditionnals</option>
+                    <option value="/mod/page/view.php?id=160503&amp;forceview=1">6. Computed</option>
+                    <option value="/mod/url/view.php?id=160504&amp;forceview=1">★ Exercice - Computed</option>
+                    <option value="/mod/url/view.php?id=160505&amp;forceview=1">► Correction - Computed</option>
+                    <option value="/mod/page/view.php?id=160506&amp;forceview=1">7. Vue Files</option>
+                    <option value="/mod/page/view.php?id=160508&amp;forceview=1">8. Props</option>
+                    <option value="/mod/page/view.php?id=160510&amp;forceview=1">01. Backend</option>
+                    <option value="/mod/page/view.php?id=160511&amp;forceview=1">02. Variables</option>
+                    <option value="/mod/page/view.php?id=160512&amp;forceview=1">03. Types</option>
+                    <option value="/mod/page/view.php?id=160513&amp;forceview=1">04. Conditions</option>
+                    <option value="/mod/page/view.php?id=160514&amp;forceview=1">05. Boucles</option>
+                    <option value="/mod/page/view.php?id=160515&amp;forceview=1">06. Fonctions</option>
+                    <option value="/mod/page/view.php?id=160516&amp;forceview=1">07. Classes</option>
+                    <option value="/mod/page/view.php?id=160517&amp;forceview=1">08. Conventions</option>
+                    <option value="/mod/page/view.php?id=160518&amp;forceview=1">09. echo</option>
+                    <option value="/mod/page/view.php?id=160519&amp;forceview=1">10. Projet - Robot Factory</option>
+                    <option value="/mod/url/view.php?id=160520&amp;forceview=1">► Correction - L'usine de robots</option>
+                    <option value="/mod/url/view.php?id=160521&amp;forceview=1">► Correction - L'usine de robots Bonus 1</option>
+                    <option value="/mod/url/view.php?id=160522&amp;forceview=1">► Correction - L'usine de robots Bonus 2</option>
+                    <option value="/mod/url/view.php?id=160523&amp;forceview=1">► Correction - L'usine de robots Bonus 3</option>
+                    <option value="/mod/url/view.php?id=160524&amp;forceview=1">► Correction - L'usine de robots Bonus 4</option>
+                    <option value="/mod/url/view.php?id=160525&amp;forceview=1">► Correction - L'usine de robots Bonus 5</option>
+                    <option value="/mod/page/view.php?id=160527&amp;forceview=1">01. require</option>
+                    <option value="/mod/page/view.php?id=160529&amp;forceview=1">03. Projet - Robot Factory 2</option>
+                    <option value="/mod/page/view.php?id=160535&amp;forceview=1">01. Introduction</option>
+                    <option value="/mod/page/view.php?id=160536&amp;forceview=1">02. MySQL et SQL</option>
+                    <option value="/mod/page/view.php?id=160537&amp;forceview=1">03. SELECT</option>
+                    <option value="/mod/page/view.php?id=160538&amp;forceview=1">04. JOIN</option>
+                    <option value="/mod/page/view.php?id=160539&amp;forceview=1">05. INSERT</option>
+                    <option value="/mod/page/view.php?id=160540&amp;forceview=1">06. UPDATE</option>
+                    <option value="/mod/page/view.php?id=160541&amp;forceview=1">07. DELETE</option>
+                    <option value="/mod/page/view.php?id=160542&amp;forceview=1">08. Projet - 3WA Trade</option>
+                    <option value="/mod/resource/view.php?id=160543&amp;forceview=1">Base de données</option>
+                    <option value="/mod/page/view.php?id=160546&amp;forceview=1">01. Schéma</option>
+                    <option value="/mod/page/view.php?id=160548&amp;forceview=1">01. MVC</option>
+                    <option value="/mod/page/view.php?id=160549&amp;forceview=1">02. VC</option>
+                    <option value="/mod/page/view.php?id=160550&amp;forceview=1">03. M</option>
+                    <option value="/mod/page/view.php?id=160551&amp;forceview=1">04. PDO</option>
+                    <option value="/mod/page/view.php?id=160552&amp;forceview=1">05. Projet - Distorsion</option>
+                    <option value="/mod/page/view.php?id=160555&amp;forceview=1">01. Intro POO</option>
+                    <option value="/mod/page/view.php?id=160556&amp;forceview=1">02. Classes</option>
+                    <option value="/mod/page/view.php?id=160557&amp;forceview=1">03. Encapsulation</option>
+                    <option value="/mod/page/view.php?id=160558&amp;forceview=1">04. Héritage</option>
+                    <option value="/mod/page/view.php?id=160559&amp;forceview=1">05. Interfaces</option>
+                    <option value="/mod/page/view.php?id=160560&amp;forceview=1">06. Traits</option>
+                    <option value="/mod/page/view.php?id=160561&amp;forceview=1">07. Projet - Framework maison</option>
+                    <option value="/mod/page/view.php?id=160563&amp;forceview=1">1. xmlhttprequest</option>
+                    <option value="/mod/page/view.php?id=160564&amp;forceview=1">2. fetch</option>
+                    <option value="/mod/page/view.php?id=160565&amp;forceview=1">3. Ajax - jQuery</option>
+                    <option value="/mod/page/view.php?id=160566&amp;forceview=1">4. Promises</option>
+                    <option value="/mod/url/view.php?id=160567&amp;forceview=1">★ Projet - API Github</option>
+        </select>
+            <noscript>
+                <input type="submit" class="btn btn-secondary ml-1" value="Valider">
+            </noscript>
+    </form>
+</div>
+
+                </div>
+</div>
+    <div class="col-md-4">                <div id="next-activity" class="float-right">
+                        <span class="nav-guide">
+                            Activité suivante
+                        </span>
+                            <a href="https://e.3wa.fr/mod/page/view.php?id=160529&amp;forceview=1" id="next-activity-link" class="btn btn-link" title="03. Projet - Robot Factory 2">03. Projet - Robot Factory 2 ►</a>
+                </div>
+</div>
+</div>
+    </div>
+</div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+            <i id="sidepreopen-control" aria-expanded="false" aria-controls="sidepre-blocks" data-action="toggle-drawer" data-side="right" data-preference="sidepre-open" title="Afficher / masquer les blocs">
+            </i>
+    
+            <section id="sidepre-blocks" data-region="blocks-column" class="hidden-print">
+                <aside id="block-region-side-pre" class="block-region" data-blockregion="side-pre" data-droptarget="1"><a href="https://e.3wa.fr/mod/page/view.php?id=160528&amp;forceview=1#sb-1" class="sr-only sr-only-focusable">Passer Informations Générales</a>
+
+<section id="inst1653" class=" block_html block  card mb-3" role="complementary" data-block="html" aria-labelledby="instance-1653-header">
+
+    <div class="card-body p-3">
+
+            <h5 id="instance-1653-header" class="card-title d-inline">Informations Générales</h5>
+
+
+        <div class="card-text content mt-3">
+            <div class="no-overflow"><ul>
+    <li><a href="https://drive.google.com/file/d/102z-7b2lyKmeuEtfND4dwcvIPRXdXRFJ/view?usp=sharing" target="_blank">Règlement Intérieur 3W Academy</a></li>
+</ul></div>
+            <div class="footer"></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-1"></span></aside>
+            </section>
+    
+        <div id="drawer-6375f1fec60fb6375f1fec229814" class=" drawer bg-white hidden" aria-expanded="false" aria-hidden="true" data-region="right-hand-drawer" role="region" tabindex="0">
+            <div id="message-drawer-6375f1fec60fb6375f1fec229814" class="message-app" data-region="message-drawer" role="region">
+            <div class="closewidget bg-light border-bottom text-right">
+                <a class="text-dark" data-action="closedrawer" href="https://e.3wa.fr/mod/page/view.php?id=160528&amp;forceview=1#">
+                     <i class="icon fa fa-window-close fa-fw " title="Fermer" aria-label="Fermer"></i>
+                </a>
+            </div>
+            <div class="header-container position-relative" data-region="header-container">
+                <div class="hidden border-bottom px-2 py-3" aria-hidden="true" data-region="view-contacts">
+                    <div class="d-flex align-items-center">
+                        <div class="align-self-stretch">
+                            <a class="h-100 d-flex align-items-center mr-2" href="https://e.3wa.fr/mod/page/view.php?id=160528&amp;forceview=1#" data-route-back="" role="button">
+                                <div class="icon-back-in-drawer">
+                                    <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"></i></span>
+                                    <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"></i></span>
+                                </div>
+                                <div class="icon-back-in-app">
+                                    <span class="dir-rtl-hide"><i class="icon fa fa-times fa-fw " aria-hidden="true"></i></span>
+                                </div>                            </a>
+                        </div>
+                        <div>
+                            Contacts
+                        </div>
+                        <div class="ml-auto">
+                            <a href="https://e.3wa.fr/mod/page/view.php?id=160528&amp;forceview=1#" data-route="view-search" role="button" aria-label="Recherche">
+                                <i class="icon fa fa-search fa-fw " aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>                
+                <div class="hidden bg-white position-relative border-bottom p-1 p-sm-2" aria-hidden="true" data-region="view-conversation">
+                    <div class="hidden" data-region="header-content"></div>
+                    <div class="hidden" data-region="header-edit-mode">
+                        
+                        <div class="d-flex p-2 align-items-center">
+                            Messages sélectionnés&nbsp;:
+                            <span class="ml-1" data-region="message-selected-court">1</span>
+                            <button type="button" class="ml-auto close" aria-label="Annuler la sélection de message" data-action="cancel-edit-mode">
+                                    <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div data-region="header-placeholder">
+                        <div class="d-flex">
+                            <div class="ml-2 rounded-circle bg-pulse-grey align-self-center" style="height: 38px; width: 38px">
+                            </div>
+                            <div class="ml-2 " style="flex: 1">
+                                <div class="mt-1 bg-pulse-grey w-75" style="height: 16px;">
+                                </div>
+                            </div>
+                            <div class="ml-2 bg-pulse-grey align-self-center" style="height: 16px; width: 20px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden position-absolute" data-region="confirm-dialogue-container" style="top: 0; bottom: -1px; right: 0; left: 0; background: rgba(0,0,0,0.3);"></div>
+                </div>                <div class="border-bottom  p-1 px-sm-2 py-sm-3" aria-hidden="false" data-region="view-overview">
+                    <div class="d-flex align-items-center">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text pr-2 bg-white">
+                                    <i class="icon fa fa-search fa-fw " aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control border-left-0" placeholder="Recherche" aria-label="Recherche" data-region="view-overview-search-input">
+                        </div>
+                        <div class="ml-2">
+                            <a href="https://e.3wa.fr/mod/page/view.php?id=160528&amp;forceview=1#" data-route="view-settings" data-route-param="7576" aria-label="Réglages" role="button">
+                                <i class="icon fa fa-cog fa-fw " aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-right mt-sm-3">
+                        <a href="https://e.3wa.fr/mod/page/view.php?id=160528&amp;forceview=1#" data-route="view-contacts" role="button">
+                            <i class="icon fa fa-user fa-fw " aria-hidden="true"></i>
+                            Contacts
+                            <span class="badge badge-primary bg-primary ml-2 hidden" data-region="contact-request-count" aria-label="Il y a 0 demandes de contact en attente">
+                                0
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hidden border-bottom px-2 py-3 view-search" aria-hidden="true" data-region="view-search">
+                    <div class="d-flex align-items-center">
+                        <a class="mr-2 align-self-stretch d-flex align-items-center" href="https://e.3wa.fr/mod/page/view.php?id=160528&amp;forceview=1#" data-route-back="" data-action="cancel-search" role="button">
+                            <div class="icon-back-in-drawer">
+                                <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"></i></span>
+                                <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"></i></span>
+                            </div>
+                            <div class="icon-back-in-app">
+                                <span class="dir-rtl-hide"><i class="icon fa fa-times fa-fw " aria-hidden="true"></i></span>
+                            </div>                        </a>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Recherche" aria-label="Recherche" data-region="search-input">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" data-action="search" aria-label="Recherche">
+                                    <span data-region="search-icon-container">
+                                        <i class="icon fa fa-search fa-fw " aria-hidden="true"></i>
+                                    </span>
+                                    <span class="hidden" data-region="loading-icon-container">
+                                        <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <div class="hidden border-bottom px-2 py-3" aria-hidden="true" data-region="view-settings">
+                    <div class="d-flex align-items-center">
+                        <div class="align-self-stretch">
+                            <a class="h-100 d-flex mr-2 align-items-center" href="https://e.3wa.fr/mod/page/view.php?id=160528&amp;forceview=1#" data-route-back="" role="button">
+                                <div class="icon-back-in-drawer">
+                                    <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"></i></span>
+                                    <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"></i></span>
+                                </div>
+                                <div class="icon-back-in-app">
+                                    <span class="dir-rtl-hide"><i class="icon fa fa-times fa-fw " aria-hidden="true"></i></span>
+                                </div>                            </a>
+                        </div>
+                        <div>
+                            Paramètres
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-container position-relative" data-region="body-container">
+                
+                <div class="hidden" data-region="view-contact" aria-hidden="true">
+                    <div class="p-2 pt-3" data-region="content-container"></div>
+                </div>                <div class="hidden h-100" data-region="view-contacts" aria-hidden="true" data-user-id="7576">
+                    <div class="d-flex flex-column h-100">
+                        <div class="p-3 border-bottom">
+                            <ul class="nav nav-pills nav-fill" role="tablist">
+                                <li class="nav-item">
+                                    <a id="contacts-tab-6375f1fec60fb6375f1fec229814" class="nav-link active" href="https://e.3wa.fr/mod/page/view.php?id=160528&amp;forceview=1#contacts-tab-panel-6375f1fec60fb6375f1fec229814" data-toggle="tab" data-action="show-contacts-section" role="tab" aria-controls="contacts-tab-panel-6375f1fec60fb6375f1fec229814" aria-selected="true">
+                                        Contacts
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a id="requests-tab-6375f1fec60fb6375f1fec229814" class="nav-link" href="https://e.3wa.fr/mod/page/view.php?id=160528&amp;forceview=1#requests-tab-panel-6375f1fec60fb6375f1fec229814" data-toggle="tab" data-action="show-requests-section" role="tab" aria-controls="requests-tab-panel-6375f1fec60fb6375f1fec229814" aria-selected="false">
+                                        Demandes
+                                        <span class="badge badge-primary bg-primary ml-2 hidden" data-region="contact-request-count" aria-label="Il y a 0 demandes de contact en attente">
+                                            0
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content d-flex flex-column h-100">
+                                            <div class="tab-pane fade show active h-100 lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="7576" id="contacts-tab-panel-6375f1fec60fb6375f1fec229814" data-section="contacts" role="tabpanel" aria-labelledby="contacts-tab-6375f1fec60fb6375f1fec229814">
+                    
+                    <div class="hidden text-center p-2" data-region="empty-message-container">
+                        Aucun contact
+                    </div>
+                    <div class="hidden list-group" data-region="content-container">
+                        
+                    </div>
+                    <div class="list-group" data-region="placeholder-container">
+                        
+                    </div>
+                    <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+                        <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+                    </div>
+                </div>
+                
+                                            <div class="tab-pane fade h-100 lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="7576" id="requests-tab-panel-6375f1fec60fb6375f1fec229814" data-section="requests" role="tabpanel" aria-labelledby="requests-tab-6375f1fec60fb6375f1fec229814">
+                    
+                    <div class="hidden text-center p-2" data-region="empty-message-container">
+                        Aucune demande de contact
+                    </div>
+                    <div class="hidden list-group" data-region="content-container">
+                        
+                    </div>
+                    <div class="list-group" data-region="placeholder-container">
+                        
+                    </div>
+                    <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+                        <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+                    </div>
+                </div>
+                        </div>
+                    </div>
+                </div>                
+                <div class="view-conversation hidden h-100" aria-hidden="true" data-region="view-conversation" data-user-id="7576" data-midnight="1668639600" data-message-poll-min="10" data-message-poll-max="120" data-message-poll-after-max="300" style="overflow-y: auto; overflow-x: hidden">
+                    <div class="position-relative h-100" data-region="content-container" style="overflow-y: auto; overflow-x: hidden">
+                        <div class="content-message-container hidden h-100 px-2 pt-0" data-region="content-message-container" role="log" style="overflow-y: auto; overflow-x: hidden">
+                            <div class="py-3 sticky-top z-index-1 border-bottom text-center hidden" data-region="contact-request-sent-message-container">
+                                <p class="m-0">Demande de contact envoyée</p>
+                                <p class="font-italic font-weight-light" data-region="text"></p>
+                            </div>
+                            <div class="p-3 text-center hidden" data-region="self-conversation-message-container">
+                                <p class="m-0">Espace personnel</p>
+                                <p class="font-italic font-weight-light" data-region="text">Enregistrer des brouillons, liens, note, etc. pour un usage ultérieur.</p>
+                           </div>
+                            <div class="hidden text-center p-3" data-region="more-messages-loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</div>
+                        </div>
+                        <div class="p-4 w-100 h-100 hidden position-absolute" data-region="confirm-dialogue-container" style="top: 0; background: rgba(0,0,0,0.3);">
+                            
+                            <div class="p-3 bg-white" data-region="confirm-dialogue" role="alert">
+                                <p class="text-muted" data-region="dialogue-text"></p>
+                                <div class="mb-2 custom-control custom-checkbox hidden" data-region="delete-messages-for-all-users-toggle-container">
+                                    <input type="checkbox" class="custom-control-input" id="delete-messages-for-all-users" data-region="delete-messages-for-all-users-toggle">
+                                    <label class="custom-control-label text-muted" for="delete-messages-for-all-users">
+                                        Supprimer pour moi et et pour tous les autres
+                                    </label>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-block">
+                                    <span data-region="dialogue-button-text">Bloc</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-unblock">
+                                    <span data-region="dialogue-button-text">Débloquer</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-remove-contact">
+                                    <span data-region="dialogue-button-text">Supprimer</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-add-contact">
+                                    <span data-region="dialogue-button-text">Ajouter</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-delete-selected-messages">
+                                    <span data-region="dialogue-button-text">Supprimer</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-delete-conversation">
+                                    <span data-region="dialogue-button-text">Supprimer</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="request-add-contact">
+                                    <span data-region="dialogue-button-text">Envoyer une demande de contact</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="accept-contact-request">
+                                    <span data-region="dialogue-button-text">Accepter et ajouter aux contacts</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-block hidden" data-action="decline-contact-request">
+                                    <span data-region="dialogue-button-text">Décliner</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block" data-action="okay-confirm">OK</button>
+                                <button type="button" class="btn btn-secondary btn-block" data-action="cancel-confirm">Annuler</button>
+                            </div>
+                        </div>
+                        <div class="px-2 pb-2 pt-0" data-region="content-placeholder">
+                            <div class="h-100 d-flex flex-column">
+                                <div class="px-2 pb-2 pt-0 bg-light h-100" style="overflow-y: auto">
+                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                </div>
+                            </div>                        </div>
+                    </div>
+                </div>
+                
+                <div class="hidden" aria-hidden="true" data-region="view-group-info">
+                    <div class="pt-3 h-100 d-flex flex-column" data-region="group-info-content-container" style="overflow-y: auto"></div>
+                </div>                <div class="h-100 view-overview-body" aria-hidden="false" data-region="view-overview" data-user-id="7576">
+                    <div id="message-drawer-view-overview-container-6375f1fec60fb6375f1fec229814" class="d-flex flex-column h-100" style="overflow-y: auto">
+                            
+                            
+                            <div class="section border-0 card" data-region="view-overview-favourites">
+                                <div id="view-overview-favourites-toggle" class="card-header p-0" data-region="toggle">
+                                    <button class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed" data-toggle="collapse" data-target="#view-overview-favourites-target-6375f1fec60fb6375f1fec229814" aria-expanded="false" aria-controls="view-overview-favourites-target-6375f1fec60fb6375f1fec229814">
+                                        <span class="collapsed-icon-container">
+                                            <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                        <span class="expanded-icon-container">
+                                            <i class="icon fa fa-caret-down fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                        <span class="font-weight-bold">Favoris</span>
+                                        <small class="hidden ml-1" data-region="section-total-count-container" aria-label=" conversations">
+                                            (<span data-region="section-total-count"></span>)
+                                        </small>
+                                        <span class="hidden ml-2" data-region="loading-icon-container">
+                                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+                                        </span>
+                                        <span class="hidden badge badge-pill badge-primary ml-auto bg-primary" data-region="section-unread-count">
+                                            
+                                        </span>
+                                    </button>
+                                </div>
+                                                            <div class="collapse border-bottom  lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="7576" id="view-overview-favourites-target-6375f1fec60fb6375f1fec229814" aria-labelledby="view-overview-favourites-toggle" data-parent="#message-drawer-view-overview-container-6375f1fec60fb6375f1fec229814">
+                                
+                                <div class="hidden text-center p-2" data-region="empty-message-container">
+                                            <p class="text-muted mt-2">Aucune conversation favorite</p>
+
+                                </div>
+                                <div class="hidden list-group" data-region="content-container">
+                                    
+                                </div>
+                                <div class="list-group" data-region="placeholder-container">
+                                            <div class="text-center py-2"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</div>
+
+                                </div>
+                                <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            
+                            <div class="section border-0 card" data-region="view-overview-group-messages">
+                                <div id="view-overview-group-messages-toggle" class="card-header p-0" data-region="toggle">
+                                    <button class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed" data-toggle="collapse" data-target="#view-overview-group-messages-target-6375f1fec60fb6375f1fec229814" aria-expanded="false" aria-controls="view-overview-group-messages-target-6375f1fec60fb6375f1fec229814">
+                                        <span class="collapsed-icon-container">
+                                            <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                        <span class="expanded-icon-container">
+                                            <i class="icon fa fa-caret-down fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                        <span class="font-weight-bold">Groupe</span>
+                                        <small class="hidden ml-1" data-region="section-total-count-container" aria-label=" conversations">
+                                            (<span data-region="section-total-count"></span>)
+                                        </small>
+                                        <span class="hidden ml-2" data-region="loading-icon-container">
+                                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+                                        </span>
+                                        <span class="hidden badge badge-pill badge-primary ml-auto bg-primary" data-region="section-unread-count">
+                                            
+                                        </span>
+                                    </button>
+                                </div>
+                                                            <div class="collapse border-bottom  lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="7576" id="view-overview-group-messages-target-6375f1fec60fb6375f1fec229814" aria-labelledby="view-overview-group-messages-toggle" data-parent="#message-drawer-view-overview-container-6375f1fec60fb6375f1fec229814">
+                                
+                                <div class="hidden text-center p-2" data-region="empty-message-container">
+                                            <p class="text-muted mt-2">Pas de conversation de groupe</p>
+
+                                </div>
+                                <div class="hidden list-group" data-region="content-container">
+                                    
+                                </div>
+                                <div class="list-group" data-region="placeholder-container">
+                                            <div class="text-center py-2"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</div>
+
+                                </div>
+                                <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            
+                            <div class="section border-0 card" data-region="view-overview-messages">
+                                <div id="view-overview-messages-toggle" class="card-header p-0" data-region="toggle">
+                                    <button class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed" data-toggle="collapse" data-target="#view-overview-messages-target-6375f1fec60fb6375f1fec229814" aria-expanded="false" aria-controls="view-overview-messages-target-6375f1fec60fb6375f1fec229814">
+                                        <span class="collapsed-icon-container">
+                                            <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                        <span class="expanded-icon-container">
+                                            <i class="icon fa fa-caret-down fa-fw " aria-hidden="true"></i>
+                                        </span>
+                                        <span class="font-weight-bold">Privée</span>
+                                        <small class="hidden ml-1" data-region="section-total-count-container" aria-label=" conversations">
+                                            (<span data-region="section-total-count"></span>)
+                                        </small>
+                                        <span class="hidden ml-2" data-region="loading-icon-container">
+                                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+                                        </span>
+                                        <span class="hidden badge badge-pill badge-primary ml-auto bg-primary" data-region="section-unread-count">
+                                            
+                                        </span>
+                                    </button>
+                                </div>
+                                                            <div class="collapse border-bottom  lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="7576" id="view-overview-messages-target-6375f1fec60fb6375f1fec229814" aria-labelledby="view-overview-messages-toggle" data-parent="#message-drawer-view-overview-container-6375f1fec60fb6375f1fec229814">
+                                
+                                <div class="hidden text-center p-2" data-region="empty-message-container">
+                                            <p class="text-muted mt-2">Pas de conversation privée</p>
+
+                                </div>
+                                <div class="hidden list-group" data-region="content-container">
+                                    
+                                </div>
+                                <div class="list-group" data-region="placeholder-container">
+                                            <div class="text-center py-2"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</div>
+
+                                </div>
+                                <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container">
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+                
+                <div data-region="view-search" aria-hidden="true" class="h-100 hidden" data-user-id="7576" data-users-offset="0" data-messages-offset="0" style="overflow-y: auto">
+                    <div class="hidden" data-region="search-results-container" style="overflow-y: auto">
+                        
+                        <div class="d-flex flex-column">
+                            <div class="mb-3 bg-white" data-region="all-contacts-container">
+                                <div data-region="contacts-container" class="pt-2">
+                                    <h4 class="h6 px-2">Contacts</h4>
+                                    <div class="list-group" data-region="list"></div>
+                                </div>
+                                <div data-region="non-contacts-container" class="pt-2 border-top">
+                                    <h4 class="h6 px-2">Non contact</h4>
+                                    <div class="list-group" data-region="list"></div>
+                                </div>
+                                <div class="text-right">
+                                    <button class="btn btn-link text-primary" data-action="load-more-users">
+                                        <span data-region="button-text">Charger plus</span>
+                                        <span data-region="loading-icon-container" class="hidden"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-white" data-region="messages-container">
+                                <h4 class="h6 px-2 pt-2">Messages personnels</h4>
+                                <div class="list-group" data-region="list"></div>
+                                <div class="text-right">
+                                    <button class="btn btn-link text-primary" data-action="load-more-messages">
+                                        <span data-region="button-text">Charger plus</span>
+                                        <span data-region="loading-icon-container" class="hidden"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="hidden p-3 text-center" data-region="no-results-container">Aucun résultat</p>
+                        </div>                    </div>
+                    <div class="hidden" data-region="loading-placeholder">
+                        <div class="text-center pt-3 icon-size-4"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</div>
+                    </div>
+                    <div class="p-3 text-center" data-region="empty-message-container">
+                        <p>Rechercher des personnes et des messages</p>
+                    </div>
+                </div>                
+                <div class="h-100 hidden bg-white" aria-hidden="true" data-region="view-settings">
+                    <div class="hidden" data-region="content-container">
+                        
+                        <div data-region="settings" class="p-3">
+                            <h3 class="h6 font-weight-bold">Confidentialité</h3>
+                            <p>Vous pouvez choisir qui peut vous envoyer un message personnel</p>
+                            <div data-preference="blocknoncontacts" class="mb-3">
+                                <fieldset>
+                                    <legend class="sr-only">Accepter des messages de&nbsp;:</legend>
+                                        <div class="custom-control custom-radio mb-2">
+                                            <input type="radio" name="message_blocknoncontacts" class="custom-control-input" id="block-noncontacts-6375f1fec60fb6375f1fec229814-1" value="1">
+                                            <label class="custom-control-label ml-2" for="block-noncontacts-6375f1fec60fb6375f1fec229814-1">
+                                                Mes contacts seulement
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-radio mb-2">
+                                            <input type="radio" name="message_blocknoncontacts" class="custom-control-input" id="block-noncontacts-6375f1fec60fb6375f1fec229814-0" value="0">
+                                            <label class="custom-control-label ml-2" for="block-noncontacts-6375f1fec60fb6375f1fec229814-0">
+                                                Mes contacts et tout le monde dans mes cours
+                                            </label>
+                                        </div>
+                                </fieldset>
+                            </div>
+                        
+                            <div class="hidden" data-region="notification-preference-container">
+                                <h3 class="mb-2 mt-4 h6 font-weight-bold">Préférences de notification</h3>
+                            </div>
+                        
+                            <h3 class="mb-2 mt-4 h6 font-weight-bold">Général</h3>
+                            <div data-preference="entertosend">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="enter-to-send-6375f1fec60fb6375f1fec229814">
+                                    <label class="custom-control-label" for="enter-to-send-6375f1fec60fb6375f1fec229814">
+                                        Taper entrée pour envoyer
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-region="placeholder-container">
+                        
+                        <div class="d-flex flex-column p-3">
+                            <div class="w-25 bg-pulse-grey h6" style="height: 18px"></div>
+                            <div class="w-75 bg-pulse-grey mb-4" style="height: 18px"></div>
+                            <div class="mb-3">
+                                <div class="w-100 d-flex mb-3">
+                                    <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px"></div>
+                                    <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                                </div>
+                                <div class="w-100 d-flex mb-3">
+                                    <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px"></div>
+                                    <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                                </div>
+                                <div class="w-100 d-flex mb-3">
+                                    <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px"></div>
+                                    <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                                </div>
+                            </div>
+                            <div class="w-50 bg-pulse-grey h6 mb-3 mt-2" style="height: 18px"></div>
+                            <div class="mb-4">
+                                <div class="w-100 d-flex mb-2 align-items-center">
+                                    <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px"></div>
+                                    <div class="bg-pulse-grey w-25 ml-2" style="height: 18px"></div>
+                                </div>
+                                <div class="w-100 d-flex mb-2 align-items-center">
+                                    <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px"></div>
+                                    <div class="bg-pulse-grey w-25 ml-2" style="height: 18px"></div>
+                                </div>
+                            </div>
+                            <div class="w-25 bg-pulse-grey h6 mb-3 mt-2" style="height: 18px"></div>
+                            <div class="mb-3">
+                                <div class="w-100 d-flex mb-2 align-items-center">
+                                    <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px"></div>
+                                    <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                                </div>
+                            </div>
+                        </div>                    </div>
+                </div>            </div>
+            <div class="footer-container position-relative" data-region="footer-container">
+                
+                <div class="hidden border-top bg-white position-relative" aria-hidden="true" data-region="view-conversation" data-enter-to-send="0">
+                    <div class="hidden p-sm-2" data-region="content-messages-footer-container">
+                        
+                            <div class="emoji-auto-complete-container w-100 hidden" data-region="emoji-auto-complete-container" aria-live="polite" aria-hidden="true">
+                            </div>
+                        <div class="d-flex mt-sm-1">
+                            <textarea dir="auto" data-region="send-message-txt" class="form-control bg-light" rows="3" data-auto-rows="" data-min-rows="3" data-max-rows="5" aria-label="Écrire un message" placeholder="Écrire un message" style="resize: none"></textarea>
+                        
+                            <div class="position-relative d-flex flex-column">
+                                    <div data-region="emoji-picker-container" class="emoji-picker-container hidden" aria-hidden="true">
+                                        
+                                        <div data-region="emoji-picker" class="card shadow emoji-picker">
+                                            <div class="card-header px-1 pt-1 pb-0 d-flex justify-content-between flex-shrink-0">
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button selected" data-action="show-category" data-category="Recent" title="Récents">
+                                                    <i class="icon fa fa-clock-o fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button" data-action="show-category" data-category="Smileys &amp; People" title="Émoticônes &amp; personnes">
+                                                    <i class="icon fa fa-smile-o fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button" data-action="show-category" data-category="Animals &amp; Nature" title="Animaux &amp; nature">
+                                                    <i class="icon fa fa-leaf fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button" data-action="show-category" data-category="Food &amp; Drink" title="Nourriture &amp; boissons">
+                                                    <i class="icon fa fa-cutlery fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button" data-action="show-category" data-category="Travel &amp; Places" title="Voyages &amp; lieux">
+                                                    <i class="icon fa fa-plane fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button" data-action="show-category" data-category="Activities" title="Activités">
+                                                    <i class="icon fa fa-futbol-o fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button" data-action="show-category" data-category="Objects" title="Objets">
+                                                    <i class="icon fa fa-lightbulb-o fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button" data-action="show-category" data-category="Symbols" title="Symboles">
+                                                    <i class="icon fa fa-heart fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                                <button class="btn btn-outline-secondary icon-no-margin category-button" data-action="show-category" data-category="Flags" title="Drapeaux">
+                                                    <i class="icon fa fa-flag fa-fw " aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                            <div class="card-body p-2 d-flex flex-column overflow-hidden">
+                                                <div class="input-group mb-1 flex-shrink-0">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text pr-0 bg-white text-muted">
+                                                            <i class="icon fa fa-search fa-fw " aria-hidden="true"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" class="form-control border-left-0" placeholder="Rechercher" aria-label="Rechercher" data-region="search-input">
+                                                </div>
+                                                <div class="flex-grow-1 overflow-auto emojis-container h-100" data-region="emojis-container">
+                                                    <div class="position-relative" data-region="row-container"></div>
+                                                </div>
+                                                <div class="flex-grow-1 overflow-auto search-results-container h-100 hidden" data-region="search-results-container">
+                                                    <div class="position-relative" data-region="row-container"></div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer d-flex flex-shrink-0" data-region="footer">
+                                                <div class="emoji-preview" data-region="emoji-preview"></div>
+                                                <div data-region="emoji-short-name" class="emoji-short-name text-muted text-wrap ml-2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-link btn-icon icon-size-3 ml-1" aria-label="Activer/désactiver le sélecteur d&#39;émojis" data-action="toggle-emoji-picker">
+                                        <i class="icon fa fa-smile-o fa-fw " aria-hidden="true"></i>
+                                    </button>
+                                <button class="btn btn-link btn-icon icon-size-3 ml-1 mt-auto" aria-label="Envoyer message personnel" data-action="send-message">
+                                    <span data-region="send-icon-container"><i class="icon fa fa-paper-plane fa-fw " aria-hidden="true"></i></span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden p-sm-2" data-region="content-messages-footer-edit-mode-container">
+                        
+                        <div class="d-flex p-3 justify-content-end">
+                            <button class="btn btn-link btn-icon my-1 icon-size-4" data-action="delete-selected-messages" data-toggle="tooltip" data-placement="top" title="Supprimer les messages sélectionnés">
+                                <span data-region="icon-container"><i class="icon fa fa-trash fa-fw " aria-hidden="true"></i></span>
+                                <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</span>
+                                <span class="sr-only">Supprimer les messages sélectionnés</span>
+                            </button>
+                        </div>                    </div>
+                    <div class="hidden bg-secondary p-sm-3" data-region="content-messages-footer-require-contact-container">
+                        
+                        <div class="p-3 bg-white">
+                            <p data-region="title"></p>
+                            <p class="text-muted" data-region="text"></p>
+                            <button type="button" class="btn btn-primary btn-block" data-action="request-add-contact">
+                                <span data-region="dialogue-button-text">Envoyer une demande de contact</span>
+                                <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hidden bg-secondary p-sm-3" data-region="content-messages-footer-require-unblock-container">
+                        
+                        <div class="p-3 bg-white">
+                            <p class="text-muted" data-region="text">Vous avez bloqué cet utilisateur.</p>
+                            <button type="button" class="btn btn-primary btn-block" data-action="request-unblock">
+                                <span data-region="dialogue-button-text">Débloquer l'utilisateur</span>
+                                <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Chargement" aria-label="Chargement"></i></span>
+</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hidden bg-secondary p-sm-3" data-region="content-messages-footer-unable-to-message">
+                        
+                        <div class="p-3 bg-white">
+                            <p class="text-muted" data-region="text">Vous ne pouvez pas envoyer un message à cet utilisateur</p>
+                        </div>
+                    </div>
+                    <div class="p-sm-2" data-region="placeholder-container">
+                        <div class="d-flex">
+                            <div class="bg-pulse-grey w-100" style="height: 80px"></div>
+                            <div class="mx-2 mb-2 align-self-end bg-pulse-grey" style="height: 20px; width: 20px"></div>
+                        </div>                    </div>
+                    <div class="hidden position-absolute" data-region="confirm-dialogue-container" style="top: -1px; bottom: 0; right: 0; left: 0; background: rgba(0,0,0,0.3);"></div>
+                </div>                    <div data-region="view-overview" class="text-center">
+                        <a href="https://e.3wa.fr/message/index.php">
+                            Tout afficher
+                        </a>
+                    </div>
+            </div>
+        </div>
+
+</div>
+    
+            <div id="nav-drawer" data-region="drawer" class="hidden-print moodle-has-zindex closed" aria-hidden="true" tabindex="-1">
+                <ul class="list-group metismenu">
+                            <li class="list-group-item" data-key="course-sections">
+                                <a class="m-l-0 has-arrow" href="javascript:void(0);">
+                                    <span class="text">Sections de cours</span>
+                                </a>
+                                <ul class="collapse">
+                                </ul>
+                            </li>
+                                <li class="list-group-item list-group-item-action " data-key="participants">
+                                    <a href="https://e.3wa.fr/user/index.php?id=2009">
+                                        <span class="text m-l-0">Participants</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item list-group-item-action " data-key="badgesview">
+                                    <a href="https://e.3wa.fr/badges/view.php?type=2&amp;id=2009">
+                                        <span class="text m-l-0">Badges</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item list-group-item-action " data-key="competencies">
+                                    <a href="https://e.3wa.fr/admin/tool/lp/coursecompetencies.php?courseid=2009">
+                                        <span class="text m-l-0">Compétences</span>
+                                    </a>
+                                </li>
+                        </ul>
+                        <ul class="list-group metismenu">
+                                <li class="list-group-item list-group-item-action " data-key="myhome">
+                                    <a href="https://e.3wa.fr/my/">
+                                        <span class="text m-l-0">Tableau de bord</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item list-group-item-action " data-key="home">
+                                    <a href="https://e.3wa.fr/?redirect=0">
+                                        <span class="text m-l-0">Accueil du site</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item list-group-item-action " data-key="calendar">
+                                    <a href="https://e.3wa.fr/calendar/view.php?view=month&amp;course=2009">
+                                        <span class="text m-l-0">Calendrier</span>
+                                    </a>
+                                </li>
+                            <li class="list-group-item" data-key="mycourses">
+                                <a class="m-l-0 has-arrow" href="javascript:void(0);">
+                                    <span class="text">Mes cours</span>
+                                </a>
+                                <ul class="collapse">
+                                            <li class="list-group-item list-group-item-action " data-key="682">
+                                                <a class="list-group-item list-group-item-action " href="https://e.3wa.fr/course/index.php?categoryid=682">
+                                                    <span class="text">Chaudron02 - Novembre 2021</span>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action " data-key="702">
+                                                <a class="list-group-item list-group-item-action " href="https://e.3wa.fr/course/index.php?categoryid=702">
+                                                    <span class="text">Promotion BST09 - Janvier 2022</span>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action " data-key="700">
+                                                <a class="list-group-item list-group-item-action " href="https://e.3wa.fr/course/index.php?categoryid=700">
+                                                    <span class="text">Promotion LIVE70A - Janvier 2022</span>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action " data-key="299">
+                                                <a class="list-group-item list-group-item-action " href="https://e.3wa.fr/course/index.php?categoryid=299">
+                                                    <span class="text">Ressources pédagogiques</span>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action " data-key="570">
+                                                <a class="list-group-item list-group-item-action " href="https://e.3wa.fr/course/index.php?categoryid=570">
+                                                    <span class="text">Suivi de Formation - Appel et QCM</span>
+                                                </a>
+                                            </li>
+                                </ul>
+                            </li>
+                                <li class="list-group-item list-group-item-action " data-key="privatefiles">
+                                    <a href="https://e.3wa.fr/user/files.php">
+                                        <span class="text m-l-0">Fichiers personnels</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item list-group-item-action " data-key="2006">
+                                    <a href="https://e.3wa.fr/course/view.php?id=2006">
+                                        <span class="text m-l-1">Intégration LIVE70A - Janvier 2022</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item list-group-item-action " data-key="784">
+                                    <a href="https://e.3wa.fr/course/view.php?id=784">
+                                        <span class="text m-l-1">Informations utiles</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item list-group-item-action " data-key="1549">
+                                    <a href="https://e.3wa.fr/course/view.php?id=1549">
+                                        <span class="text m-l-1">qcms</span>
+                                    </a>
+                                </li>
+                </ul>            </div>
+            
+            <div id="nav-drawer-footer">
+                <span id="themesettings-control">
+                    <i title="Paramètres d&#39;accessibilité" class="fa fa-universal-access">
+                    </i>
+                    <span class="text">Paramètres d'accessibilité</span>
+                </span>
+            </div>
+    </div><div id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important" class=""></div><!-- Ends .page-wrapper -->
+    
+<div id="top-footer">
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-7 contact">
+            <h3>Rester en contact</h3>
+            <h4>Conecti.me</h4>
+            <ul>
+                    <li>
+                        <i class="slicon-globe"></i>
+                        <a href="https://3wa.fr/" target="_blank">https://3wa.fr</a>
+                    </li>
+                    <li>
+                        <i class="slicon-phone"></i>
+                        <a href="tel:01 75 43 42 42" target="_blank">01 75 43 42 42</a>
+                    </li>
+                    <li>
+                        <i class="slicon-envelope"></i>
+                        <a href="mailto:contact@3wa.fr" target="_blank">contact@3wa.fr</a>
+                    </li>
+            </ul>
+        </div>
+        <div class="col-md-5 social">
+          <ul>
+                <li>
+                  <a href="https://www.facebook.com/3WAcademy/" target="_blank" class="facebook btn">
+                    <i class="slicon-social-facebook"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://twitter.com/3WAcademy" target="_blank" class="twitter btn">
+                    <i class="slicon-social-twitter"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://fr.linkedin.com/school/3w-academy/" target="_blank" class="linkedin btn">
+                    <i class="slicon-social-linkedin"></i>
+                  </a>
+                </li>
+
+
+
+          </ul>
+
+          <div class="plugins_standard_footer_html"><div class="tool_dataprivacy mb-2"><a class="btn btn-default" href="https://e.3wa.fr/admin/tool/dataprivacy/summary.php"><i class="slicon-folder-alt"></i> Résumé de conservation de données</a></div><div class="mobilefooter mb-2"><a class="btn btn-primary" href="https://download.moodle.org/mobile?version=2020061501.06&amp;lang=fr&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile"><i class="slicon-screen-smartphone"></i> Obtenir l'app mobile</a></div></div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://e.3wa.fr/lib/requirejs.php/1599206075/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://e.3wa.fr/lib/javascript.php/1599206075/lib/jquery/jquery-3.4.1.min',
+        jqueryui: 'https://e.3wa.fr/lib/javascript.php/1599206075/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://e.3wa.fr/lib/javascript.php/1599206075/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="./02. Formulaires_files/javascript(4).php"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");require(['core/first'], function() {
+require(['core/prefetch']);
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://e.3wa.fr/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage('fr', {
+  "Audio Player": "Lecteur audio",
+  "Video Player": "Lecteur vidéo",
+  "Play": "Lecture",
+  "Pause": "Pause",
+  "Replay": "Revoir",
+  "Current Time": "Temps actuel",
+  "Duration": "Durée",
+  "Remaining Time": "Temps restant",
+  "Stream Type": "Type de flux",
+  "LIVE": "EN DIRECT",
+  "Loaded": "Chargé",
+  "Progress": "Progression",
+  "Progress Bar": "Barre de progression",
+  "progress bar timing: currentTime={1} duration={2}": "{1} de {2}",
+  "Fullscreen": "Plein écran",
+  "Non-Fullscreen": "Fenêtré",
+  "Mute": "Sourdine",
+  "Unmute": "Son activé",
+  "Playback Rate": "Vitesse de lecture",
+  "Subtitles": "Sous-titres",
+  "subtitles off": "Sous-titres désactivés",
+  "Captions": "Sous-titres transcrits",
+  "captions off": "Sous-titres transcrits désactivés",
+  "Chapters": "Chapitres",
+  "Descriptions": "Descriptions",
+  "descriptions off": "descriptions désactivées",
+  "Audio Track": "Piste audio",
+  "Volume Level": "Niveau de volume",
+  "You aborted the media playback": "Vous avez interrompu la lecture de la vidéo.",
+  "A network error caused the media download to fail part-way.": "Une erreur de réseau a interrompu le téléchargement de la vidéo.",
+  "The media could not be loaded, either because the server or network failed or because the format is not supported.": "Cette vidéo n'a pas pu être chargée, soit parce que le serveur ou le réseau a échoué ou parce que le format n'est pas reconnu.",
+  "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "La lecture de la vidéo a été interrompue à cause d'un problème de corruption ou parce que la vidéo utilise des fonctionnalités non prises en charge par votre navigateur.",
+  "No compatible source was found for this media.": "Aucune source compatible n'a été trouvée pour cette vidéo.",
+  "The media is encrypted and we do not have the keys to decrypt it.": "Le média est chiffré et nous n'avons pas les clés pour le déchiffrer.",
+  "Play Video": "Lire la vidéo",
+  "Close": "Fermer",
+  "Close Modal Dialog": "Fermer la boîte de dialogue modale",
+  "Modal Window": "Fenêtre modale",
+  "This is a modal window": "Ceci est une fenêtre modale",
+  "This modal can be closed by pressing the Escape key or activating the close button.": "Ce modal peut être fermé en appuyant sur la touche Échap ou activer le bouton de fermeture.",
+  ", opens captions settings dialog": ", ouvrir les paramètres des sous-titres transcrits",
+  ", opens subtitles settings dialog": ", ouvrir les paramètres des sous-titres",
+  ", opens descriptions settings dialog": ", ouvrir les paramètres des descriptions",
+  ", selected": ", sélectionné",
+  "captions settings": "Paramètres des sous-titres transcrits",
+  "subtitles settings": "Paramètres des sous-titres",
+  "descriptions settings": "Paramètres des descriptions",
+  "Text": "Texte",
+  "White": "Blanc",
+  "Black": "Noir",
+  "Red": "Rouge",
+  "Green": "Vert",
+  "Blue": "Bleu",
+  "Yellow": "Jaune",
+  "Magenta": "Magenta",
+  "Cyan": "Cyan",
+  "Background": "Arrière-plan",
+  "Window": "Fenêtre",
+  "Transparent": "Transparent",
+  "Semi-Transparent": "Semi-transparent",
+  "Opaque": "Opaque",
+  "Font Size": "Taille des caractères",
+  "Text Edge Style": "Style des contours du texte",
+  "None": "Aucun",
+  "Raised": "Élevé",
+  "Depressed": "Enfoncé",
+  "Uniform": "Uniforme",
+  "Dropshadow": "Ombre portée",
+  "Font Family": "Famille de polices",
+  "Proportional Sans-Serif": "Polices à chasse variable sans empattement (Proportional Sans-Serif)",
+  "Monospace Sans-Serif": "Polices à chasse fixe sans empattement (Monospace Sans-Serif)",
+  "Proportional Serif": "Polices à chasse variable avec empattement (Proportional Serif)",
+  "Monospace Serif": "Polices à chasse fixe avec empattement (Monospace Serif)",
+  "Casual": "Manuscrite",
+  "Script": "Scripte",
+  "Small Caps": "Petites capitales",
+  "Reset": "Réinitialiser",
+  "restore all settings to the default values": "Restaurer tous les paramètres aux valeurs par défaut",
+  "Done": "Terminé",
+  "Caption Settings Dialog": "Boîte de dialogue des paramètres des sous-titres transcrits",
+  "Beginning of dialog window. Escape will cancel and close the window.": "Début de la fenêtre de dialogue. La touche d'échappement annulera et fermera la fenêtre.",
+  "End of dialog window.": "Fin de la fenêtre de dialogue."
+});
+
+    });
+});;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+require(
+[
+    'jquery',
+    'core_message/message_popover'
+],
+function(
+    $,
+    Popover
+) {
+    var toggle = $('#message-drawer-toggle-6375f1fec39326375f1fec22983');
+    Popover.init(toggle);
+});
+;
+
+        require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+            CustomEvents.define('#jump-to-activity', [CustomEvents.events.accessibleChange]);
+            $('#jump-to-activity').on(CustomEvents.events.accessibleChange, function() {
+                if (!$(this).val()) {
+                    return false;
+                }
+                $('#url_select_f6375f1fec229813').submit();
+            });
+        });
+    ;
+
+require(['jquery', 'core_message/message_drawer'], function($, MessageDrawer) {
+    var root = $('#message-drawer-6375f1fec60fb6375f1fec229814');
+    MessageDrawer.init(root, '6375f1fec60fb6375f1fec229814', false);
+});
+;
+
+require(['theme_boost/loader']);
+
+require(['theme_boost/drawer'], function(mod) {
+    mod.init();
+});
+
+require(['theme_moove/metismenu', 'jquery'], function(metisMenu, $) {
+    $(".metismenu").metisMenu();
+});
+
+require([], function() {
+    var iconsearch = document.querySelector('.moove-search-input .slicon-magnifier');
+    var btnclosesearch = document.querySelector('.search-input-form .close-search');
+    var searchinputform = document.querySelector('.moove-search-input');
+
+    if (iconsearch) {
+
+        var togglesearchinputform = function() {
+            searchinputform.classList.toggle('expanded');
+        }
+
+        iconsearch.onclick = togglesearchinputform;
+        btnclosesearch.onclick = togglesearchinputform;
+    }
+});
+
+require(['theme_moove/accessibilitybar'], function(bar) {
+    bar.init();
+});
+
+require(['theme_moove/themesettings'], function(themesettings) {
+    themesettings.init();
+});
+
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(198438, [], true); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Modifi\u00e9 le","name":"Nom","error":"Erreur","info":"Information","yes":"Oui","no":"Non","cancel":"Annuler","confirm":"Confirmer","areyousure":"Voulez-vous vraiment continuer\u00a0?","closebuttontitle":"Fermer","unknownerror":"Erreur inconnue","file":"Fichier","url":"URL"},"repository":{"type":"Type","size":"Taille","invalidjson":"Cha\u00eene JSON non valide","nofilesattached":"Aucun fichier joint","filepicker":"S\u00e9lecteur de fichiers","logout":"D\u00e9connexion","nofilesavailable":"Aucun fichier disponible","norepositoriesavailable":"D\u00e9sol\u00e9, aucun de vos d\u00e9p\u00f4ts actuels ne peut retourner de fichiers dans le format requis.","fileexistsdialogheader":"Le fichier existe","fileexistsdialog_editor":"Un fichier de ce nom a d\u00e9j\u00e0 \u00e9t\u00e9 joint au texte que vous modifiez.","fileexistsdialog_filemanager":"Un fichier de ce nom a d\u00e9j\u00e0 \u00e9t\u00e9 joint","renameto":"Renommer \u00e0 \u00ab\u00a0{$a}\u00a0\u00bb","referencesexist":"Il y a {$a} liens qui pointent vers ce fichier","select":"S\u00e9lectionnez"},"admin":{"confirmdeletecomments":"Voulez-vous vraiment supprimer des commentaires\u00a0?","confirmation":"Confirmation"},"debug":{"debuginfo":"Info de d\u00e9bogage","line":"Ligne","stacktrace":"Trace de la pile"},"langconfig":{"labelsep":"&nbsp;"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"fr"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random6375f1fec229815'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random6375f1fec229815'); });
+})();
+//]]>
+</script>
+
+    
+    
+    </body></html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Binding</title>
+</head>
+<body>
+    <div id="app">
+        <ol>
+            <todo-item
+            v-for="item in groceryList"
+            :todo="item"
+            :key="item.id"
+            >
+            </todo-item>
+        </ol>
+    </div>
+    <script src="./vue.global.js"></script>
+    <script type="module">
+    import TodoItem from "./TodoItem.js";
+
+        Vue.createApp({
+            components: {
+                TodoItem
+            },
+            data() {
+                return {
+                    groceryList: [
+                        {id: 0, text: "Vegetables"},
+                        {id: 1, text: "Cheese"},
+                        {id: 2, text: "Apple"},
+                        {id: 3, text: "Strawberries"},
+                    ]
+                }
+            },
+            methods: {
+                toggleRed() {
+                    this.isRed = !this.isRed;
+                },
+                toggleColor() {
+                    this.color = this.color === 'green' ? 'blue' : 'green';
+                },
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

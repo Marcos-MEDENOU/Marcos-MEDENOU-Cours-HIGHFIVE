@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 200px;
+    padding: 80px;
+}
+
+#submit,#reset{
+    padding: 7px;
+    width: 100px;
+}
