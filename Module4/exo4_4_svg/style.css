@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: red;
+}
+body{
+    background-color: rgb(70, 69, 67);
+
+}
+main{
+    width: 1200px;
+  
+    text-align: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header,footer{
+    background-color: rgb(58, 57, 57);
+    text-align: center;
+    padding: 30px;
+}
+header p,footer p{
+    color: white;
+}

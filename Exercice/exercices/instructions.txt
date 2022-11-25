@@ -1,0 +1,61 @@
+/* Stylisez les éléments HTML selon les instructions suivantes.
+NE MODIFIEZ PAS LE HTML EXISTANT POUR LE FAIRE. ÉCRIVEZ SEULEMENT CSS !
+h2{
+couleur violet
+}
+/* Donne à l'élément <body> un arrière-plan de #bdc3c7*/
+
+
+/* Créer l'élément <h1> #9b59b6*/
+
+
+/* Rendre tous les éléments <h2> orange */
+
+
+/* Rend tous les éléments <li> bleus (choisissez votre propre bleu hexadécimal)*/
+
+
+/*Changer l'arrière-plan de chaque paragraphe en jaune*/
+
+
+/*Faire en sorte que toutes les entrées aient une bordure rouge de 3px*/
+
+
+/* Donne à tout ce qui a la classe 'hello' un fond blanc*/
+
+
+/* Donnez à l'élément avec l'id 'special' une bordure bleue solide de 2px (choisissez votre propre bleu RVB)*/
+
+
+/*Faire tous les <p> qui sont imbriqués à l'intérieur des divs 25px font(font-size: 25px)*/
+
+
+/*Faire en sorte que seules les entrées de type 'texte' aient un fond gris*/
+
+
+/* Donne aux deux <p> à l'intérieur de la 3ème <div> un fond rose*/
+
+
+/* Donnez au 2ème <p> à l'intérieur du 3ème <div> une bordure blanche de 5px*/
+
+
+/* Rendre le <em> dans le 3ème élément <div> blanc et la police 20px (font-size:20px)*/
+
+
+
+/*DÉFIS BONUS*/
+/*Vous devrez peut-être rechercher d'autres sélecteurs et propriétés*/
+
+/*Faites en sorte que toutes les cases à cocher "cochées" aient une marge gauche de 50px (margin-left : 50px)*/
+
+
+/* Rendre les éléments <label> tous en MAJUSCULES sans changer le HTML (recherchez certainement celui-ci */
+
+
+/*Faire la première lettre de l'élément avec l'id 'special' vert et une taille de police de 100px (font-size : 100)*/
+
+
+/*Faire passer la couleur de l'élément <h1> au bleu lorsqu'il est survolé */
+
+
+/*Rend les éléments <a> qui ont été visités en gris */

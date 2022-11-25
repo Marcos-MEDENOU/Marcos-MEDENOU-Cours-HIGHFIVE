@@ -1,0 +1,48 @@
+  
+    /*background-image: linear-gradient(to left,red,green,blue,yellow);
+            background: white url(brooklyn-bridge.jpg) no-repeat scroll top right;
+            background-image: url(logo-3wa.png),url(brooklyn-bridge.jpg) ;
+            background-repeat: no-repeat;
+            background-position: top left,top right;
+            background-size: 50%;
+            border-radius: 100px;
+            box-shadow: 50px,50px;
+        
+      }
+        body{
+            
+            /*background-image: url(brooklyn-bridge.jpg);
+            background-repeat: no-repeat;
+            background-position: top right;
+            background-attachment: scroll;
+            background-size: auto;
+            */
+            /*background: white url(brooklyn-bridge.jpg) no-repeat scroll top right;*/
+       
+.table1 tr td {
+    border: 1px solid black;
+    padding: 7px;
+}
+.table1 tr th {
+    border: 1px solid black;
+    padding: 7px;
+}
+.table2 tr td{
+    border: 1px solid rgb(223, 216, 216);
+    padding: 15px;
+}
+.table2 tr th{
+    border: 1px solid rgb(216, 208, 208);
+    padding: 15px;
+}
+.table2{
+    border-collapse: collapse;
+}
+.caption{
+    font-size: 30px;
+    padding: 10px;
+    background-image: linear-gradient(rgb(101, 104, 101),rgb(87, 87, 90) );
+}
+.table2 tbody tr:nth-child(2n+1){
+    background-color: rgb(155, 170, 170);
+}

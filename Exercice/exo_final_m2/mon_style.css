@@ -1,0 +1,108 @@
+*,
+::before,
+::after{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: lato;
+    src: url(../exo_final_m2/lato/lato-regular.woff2);
+}
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: lato;
+    line-height: 1.6rem;
+}
+body main section.section1{
+    width: 90%;
+    margin: 0 auto;
+}
+body main section.section2{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+hr{
+    clear: left;
+}
+
+body header{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1{
+    color: #40CCEA;
+    margin-bottom: 10px;
+    font-size: 3rem;
+    text-align: center;
+    border-bottom: 1px dashed #40CCEA;
+}
+section article p{
+    text-align: justify;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    /* justify-content:center ; */
+    justify-content: space-evenly;
+    background-color: #40CCEA;
+    color: white;
+    padding: 10px;
+}
+li{
+    text-decoration: none;
+}
+button{
+    background-color: #40CCEA;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10%;
+}
+hr{
+    color:#727475 ;
+}
+.image1{
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.image2{
+    float: right;
+    margin-left: 10px;
+    clear: left;
+}
+.section_a_propos{
+    max-width: 900px;
+    background-image: url("./exo_final_m2/instructions/ressources/fond.jpg") ;
+    height: 520px;
+    width: 100%;
+    margin-top:25px ;
+    background-size: cover;
+    padding-top: 20px;
+}
+.article_a_propos{
+    background-color: white;
+    width: 45%;;
+    padding: 2%;
+    margin-top: 15px;
+    margin-left: 50px;
+    margin-bottom: 15%;
+}
+
+footer{
+    text-align: center;
+    background-color: #40CCEA;
+    color: white;
+}
+.adress1{
+    color: black;
+}
+.adress_bleu{
+    color: #40CCEA;
+}
+.me_contacter1,.me_contacter2{
+    max-width: 90%;
+    margin: 0 auto;
+}

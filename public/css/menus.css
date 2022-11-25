@@ -1,0 +1,441 @@
+/********************
+reset des modeles de boites, des marges intérieurs 
+et extérieurs 
+****************/
+*{
+   
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+    font-size: var(--clr-fs_default);
+    font-family: Athiti-Regular;
+
+}
+
+/********************
+    fin reset des modeles de boites, des marges intérieurs 
+    et extérieurs 
+****************/
+/* body{
+    max-width: 780px;
+} */
+/***********************
+IMPORT DES FONTS FAMILY
+*********************/
+@font-face {
+    font-family: Athiti-Regular;
+    src: url(../assets/ressources/fonts/athiti/Athiti-Regular.ttf);
+}
+
+@font-face {
+    font-family: Athiti-Semi-Regular;
+    src: url(../assets/ressources/fonts/athiti/Athiti-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Merienda;
+    src: url(../assets/ressources/fonts/Merienda/Merienda-Regular.ttf);
+}
+
+h1,h2{
+    font-family: Merienda;
+}
+
+nav>ul li:nth-child(3) a{
+    color: var(--clr-default);
+    background-color: var(--clr-chocolate);
+}
+
+/***********************
+FIN IMPORT DES FONTS FAMILY
+*********************/
+:root{
+
+    /****************************************
+    Déclaration de variables pour les couleurs
+    ***************************************/
+    --clr-primary:#ebe3db;
+    --clr-dark:#4c4343;
+    --clr-default:#fff;
+    --clr-accent:#950000;
+    --clr-black:black;
+    /***************************************************
+    Fin de la déclaration de variables pour les couleurs
+    ***************************************************/
+
+    /***************************************************
+    DECLARATON DE VARIABLES POUR LES BORDURES EN POINTILLES
+    *************************************************/
+    --clr-brd-dashed-light: 2px dashed white;
+    --clr-brd-dashed-black: 2px dashed black;
+    --clr-brd-solid-black: 1px solid black;
+    /****************************************************
+    Fin DECLARATON DE VARIABLES POUR LES BORDURES EN POINTILLES
+    **************************************************/
+
+    /************************************************
+    DECLARATON DE VARIABLES POUR LES FONTS SIZE
+    **************************************************/
+    --clr-fs_default:18px;
+    --clr-fs-first-title:30px;
+    --clr-fs_sous_rubrique:25px;
+    --clr-fs_menus:20px;
+    --clr-fs_money_menus:50px;
+    --clr-fs_texte_sous_menu:15px;
+    --clr-fs-title-pied-page:18px;
+    --clr-fs-texte-pied-page-boutton-tri-boutton-validation-formulaire:16px;
+    --clr-fw:bold;
+
+    /*******************************************************
+    FIN DE LA DECLARATON DE VARIABLES POUR LES FONTS SIZE
+    ***************************************************/
+
+
+    /*********************************************************
+    ETOILE COLORIE AU DEBUT ET A LA FIN DES TITRES PRINCIPALE
+    ********************************************************/
+
+
+  /*********************************************************
+    fin ETOILE COLORIE AU DEBUT ET A LA FIN DES TITRES PRINCIPALE
+    ********************************************************/
+  
+}
+
+body{
+    background-image: linear-gradient(#ebe3db,#ebe3db,#fff 3%);
+}
+
+
+ 
+/**************************
+ DEBUT MAIN DECORATION
+**************************/
+.star,
+.first_section h2,
+
+.second_section h2,
+
+.three_section h2
+{
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-size: var(--clr-fs-first-title);
+}
+section p{
+    font-family: Athiti-Semi-Regular;
+    margin-bottom: 20px;
+}
+.button_plugin nav ul li{
+    padding: 8px 15px;
+    margin-bottom: 10px;
+    background-color: var(--clr-primary);
+    cursor:pointer;
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+.button_plugin nav ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.button_plugin nav{
+    margin: 0 auto;
+}
+
+.button_plugin nav ul li:active{
+    background-color: var(--clr-accent);
+    transition: 0.5s;
+    color: white;
+}
+
+.last_image{
+    position: relative;
+    left: 50%;
+    width: 100%;
+    height: auto;
+}
+
+.last_figcaption{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+}
+
+
+.log img,
+footer section img{
+    width:100px;
+}
+/* décoration gallery d'image des menus*/
+.image_container_one{
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 30px;
+    column-gap: 15px;
+    margin: 0 10px;
+    background-color: var(--clr-primary);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+
+.image_container_two{
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 30px;
+    column-gap: 15px;
+    margin: 0 10px;
+    background-color: var(--clr-primary);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+
+.image_container_three{
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 30px;
+    column-gap: 15px;
+    margin: 20px 10px;
+    background-color: var(--clr-primary);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+
+/*Images responsives*/
+
+.image_container_one img,
+.image_container_two img,
+.image_container_three img
+{
+    width: 100%;
+    height: auto;
+}
+/*************************************************
+
+lES CLASSES INTERVENANTS DANS LE TRI DES IMAGES
+
+*************************************************/
+.itemBox {
+    display: none; 
+    /* image en display none par default */
+}
+  
+  /* La class show s'ajoute aux classes des balises figure avant que les images n'apparaissent */
+.show {
+    display: initial;
+    animation: opacity_image 2s;
+}
+
+img{
+    border-radius: 5px;
+}
+#myBtnContainer .active{
+    background-color: var(--clr-accent);
+    color: white;
+}
+/*************************************************
+
+lES CLASSES INTERVENANTS DANS LE TRI DES IMAGES
+
+*************************************************/
+
+
+
+/********************************
+SUVOL DES MENUS
+*********************************/
+figure{
+    position: relative;
+    
+}
+figcaption{
+    position: absolute;
+    height: 97%;
+    top: 0;
+    bottom:0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+figcaption:hover {
+    background-color: rgba(76,67,67,.8);
+}
+
+
+figcaption:hover .img_svg{
+    display: block;
+    
+}
+
+figure:hover{
+    /* box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2); */
+    transform: scale(1.04);
+    transition: .8s;
+    /*Propriété pour l'animation du Keyframe */
+    animation: shake 0.8s;
+    /*Temps de latence correspondant a la fin du scale de l'image*/
+    animation-delay: .8s;
+    /*L'image bouge tant que le curseur y est positionné*/
+    animation-iteration-count: infinite;
+    
+}
+
+.img_svg{
+    border: 3px solid white;
+    padding-top: 3%;
+    padding-bottom:3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 0 auto;
+    display: none;
+    min-width: 80%;
+}
+
+.img_svg p{
+    font-size: var(--clr-default);
+    margin: 0;
+}
+
+.img_svg img{
+    width: 20%;
+}
+figcaption p{
+    color: white;
+}
+
+figure.hide{
+    display: none;
+}
+
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+
+@keyframes opacity_image {
+    from{
+        opacity: 0.4;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+/************************************
+MEDIA QUERRRIES START
+*************************************/
+
+@media screen and (min-width:780px) {
+    .img_svg img{
+        width: 30%;
+    }
+
+    .img_svg p{
+        margin: 0;
+    }
+    .button_plugin nav ul{
+  
+        background-color: initial;
+      
+    }
+    
+
+    .image_container_one{
+        grid-template-columns: auto auto auto;
+    }
+    .image_container_two{
+        grid-template-columns: auto auto auto;
+    }
+    .image_container_three{
+        grid-template-columns: auto auto auto;
+    }
+
+    .last_image{
+        position: unset;
+        left: 50%;
+    }
+    .last_figcaption{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+
+    .img_svg{
+        
+        padding-top: 6%;
+        padding-bottom:6%;
+        padding-left: 10%;
+        padding-right: 10%;
+        
+    }
+}
+
+@media screen and (min-width:980px) {
+   
+    /* .footer1{
+        padding: 0 100px;
+    } */
+
+   
+    main{
+        max-width: 1400px;
+    }
+    .log{
+        margin: 0;
+    }
+    .log{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .img_svg{
+        
+        padding-top: 10%;
+        padding-bottom:10%;
+        padding-left: 20%;
+        padding-right: 20%;   
+    }
+}
+/*********************************
+FIN MEDIA QUERRIES
+**********************************/

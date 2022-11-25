@@ -1,0 +1,235 @@
+/*******************************************************************/
+/*
+/*                           Header.
+/*
+/*******************************************************************/
+nav>ul li:first-child a {
+    color: var(--clr-default);
+    background-color: var(--clr-chocolate);
+}
+
+/*******************************************************************/
+/*
+/*                           welcome section.
+/*
+/*******************************************************************/
+
+main>section {
+    text-align: center;
+}
+
+main>section div {
+    text-align: justify;
+}
+
+main>section:first-of-type img {
+    animation: fade 5s;
+}
+
+/*******************************************************************/
+/*
+/*                           slide.
+/*
+/*******************************************************************/
+
+.dot-container {
+    text-align: center;
+}
+
+.slideshow-container {
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 10px;
+    color: var(--clr-default);
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: var(--clr-chocolate);
+}
+
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: var(--clr-primary);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: var(--clr-accent);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/*******************************************************************/
+/*
+/*                           article.
+/*
+/*******************************************************************/
+
+article {
+    margin-block: 3rem;
+    padding-block: 2rem;
+    background-color: var(--clr-primary);
+    border-radius: 5px;
+    animation: fade 7s;
+}
+
+figure {
+    position: relative;
+    transition: 5s;
+    cursor: pointer;
+}
+
+figcaption {
+    display: none;
+}
+
+figure:hover figcaption {
+    position: absolute;
+    top: 0;
+    bottom: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-default);
+    background-color: rgba(76, 67, 67, .9);
+    animation: fade .7s;
+}
+
+@keyframes slow {
+    from {
+        opacity: .9
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+figcaption p {
+    height: 70%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: center;
+    border: 3px solid var(--clr-default);
+}
+
+figcaption p span {
+    display: block;
+    text-align: center;
+}
+
+figcaption p span:first-of-type {
+    font-size: var(--fs-menu-price);
+    font-family: var(--ff-default-bold);
+}
+
+article ul {
+    text-align: left;
+    list-style-position: inside;
+}
+
+article ul li {
+    padding: 1rem 3rem;
+    border-bottom: var(--border-dashed-black);
+}
+
+/*******************************************************************/
+/*
+/*                            medias queries.
+/*
+/*******************************************************************/
+
+/*small mobile*/
+@media screen and (max-width:420px) {
+    figcaption p {
+        height: 85%;
+        width: 90%;
+        gap: 0.8rem;
+    }
+
+    figcaption p span:first-of-type {
+        font-size: 1em;
+    }
+}
+
+
+/*desktop*/
+@media screen and (min-width:980px) {
+
+    header,main{
+        max-width: 1400px;
+    }
+
+    main>section:first-of-type {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    main>section:first-of-type h2 {
+        flex-basis: 100%;
+    }
+
+    main>section:first-of-type img {
+        width: 33%;
+        object-fit: cover;
+        align-self: center;
+        height: 346px;
+    }
+
+    main>section:first-of-type div {
+        flex-basis: 65%;
+    }
+
+    main>section:last-of-type {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    main>section:last-of-type h2 {
+        flex-basis: 100%;
+    }
+
+    main>section:last-of-type article {
+        flex-basis: 32.30%;
+    }
+
+}

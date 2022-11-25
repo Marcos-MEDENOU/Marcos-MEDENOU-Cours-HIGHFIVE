@@ -1,0 +1,186 @@
+
+:root{
+    
+    /******************************************
+                DECLARATION DE VARIABLES 
+                    POUR LES COULEURS
+    *******************************************/
+    
+    --clr-primary: #ebe3db;
+    --clr-dark: #4c4343;
+    --clr-Accent: #950000;
+    --clr-defaut: white;
+    --clr-black: #444;
+    
+    /******************************************
+            FIN DECLARATION DE VARIABLES 
+                  POUR LES COULEURS
+    *******************************************/
+}
+
+
+@media screen and (min-width: 780px) {
+    
+/**************************************
+               DEBUT HEADER
+***************************************/
+nav > ul{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--clr-primary);
+}
+
+li{
+    border:none;
+} 
+
+.finalisation{
+    width: 90%;
+    margin: 0 auto;
+}
+/**************************************
+               FIN HEADER
+***************************************/
+
+/**************************************
+               DEBUT MAIN
+***************************************/
+
+.container_img {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    padding: 20px;
+    /* transition: animation-name 5s; */
+}
+
+main > article:last-child{
+    margin-bottom: 20px;
+}
+
+/* #figure1{
+    animation-name: figure1;
+    animation-duration: 4s;
+    position: relative;
+    
+}
+
+@keyframes figure1 {
+    0%{left: 0px; top: 0px;}
+    25%{left: 460px; top: 0px;}
+    50%{left: 460px; top: 345px;}
+    75%{ top: 345px; left: 0px; }
+    100%{left: 0px; top: 0px;}
+} */
+
+/* #figure2{
+    animation-name: figure2;
+    animation-duration: 4s;
+    position: relative;
+    
+}
+
+@keyframes figure2 {
+    0%{right: 0px; top: 0px;}
+    25%{right: 0px; top: 345px;}
+    50%{top: 345px; right: 460px;}
+    75%{bottom: 345px; top: 0px; }
+    100%{left: 460px; top: 0px;}
+} */
+/**************************************
+               FIN MAIN
+***************************************/
+
+/**************************************
+               DEBUT FOOTER
+***************************************/
+
+footer > div:first-child > div {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+footer > div > div:nth-child(n+1){
+    flex-basis: 60%;
+}
+
+.finalisation article{
+    width: 33%;
+
+}
+
+div > h3{
+    position: relative;
+    bottom: 8px;
+}
+/**************************************
+               FIN FOOTER
+***************************************/
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 980px){
+    
+/**************************************
+             DEBUT HEADER
+***************************************/
+
+    header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 1400px;
+    }
+    
+    header > div{
+        display: flex;
+        align-items: center;
+    }
+    
+    header nav > ul{
+        background-color: initial;
+        gap: 20px;
+    }
+    /**************************************
+    FIN HEADER
+    ***************************************/
+
+
+
+    /**************************************
+                   DEBUT FOOTER
+    ***************************************/
+    
+    /* footer > div > div, article{
+        flex-basis: 25%;
+        text-align: center;
+    } */
+
+    /* footer > div:first-child > div{
+        max-width: 1400px;
+        margin: 0 auto;
+    } */
+
+    .finalisation{
+        max-width: 1400px;
+    }
+
+    .container{
+        max-width: 1400px;
+    }
+
+    /**************************************
+                   FIN FOOTER
+    ***************************************/
+
+    
+}
+
+

@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: red;
+}
+body{
+    background-color: rgb(248, 245, 241);
+
+}
+main{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header,footer{
+    background-color: rgb(58, 57, 57);
+    text-align: center;
+    padding: 30px;
+}
+header p,footer p{
+    color: white;
+}
+
+.container{
+    width: 200px;
+    height: 170px;
+    background-color: red;
+    position: relative;
+}
+.rectangle1{
+    width: 30px;
+    position: absolute;
+    height: 85px;
+    top: 25%;
+    left: 15%;
+    background-color: white;
+    animation: rectangle_plus_long infinite ;
+    animation-duration: 1s; 
+    animation-delay: .2s;
+
+}
+
+.rectangle2{
+    width: 30px;
+    position: absolute;
+    height:85px;
+    top: 25%;
+    left: 45%;
+    background-color: white;
+    animation: rectangle_plus_long  infinite ;
+    animation-duration: 1s;
+    animation-delay: .4s;
+    
+}
+
+.rectangle3{
+    width: 30px;
+    position: absolute;
+    height: 85px;
+    top: 25%;
+    left: 75%;
+    background-color: white;
+    animation: rectangle_plus_long infinite;
+    animation-duration: 1s;
+    animation-delay: .6s;
+
+}
+
+@keyframes rectangle_plus_long {
+    from{
+        transform:scaleY(1.5);
+    }
+
+    to{
+        transform:scaleY(1);
+    }
+}

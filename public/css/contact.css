@@ -1,0 +1,169 @@
+/*******************************************************************/
+/*
+/*                           Header.
+/*
+/*******************************************************************/
+
+nav > ul li:last-child  a{
+    color: var(--clr-default);
+    background-color: var(--clr-chocolate);
+}
+
+/*******************************************************************/
+/*
+/*                        Main | Section.
+/*
+/*******************************************************************/
+
+main > section > h2 {
+    text-align: center;
+}
+
+main > section > p {
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+section p span {
+    width: 15px;
+    height: 5px;
+    text-align: center;
+    color: var(--clr-accent);
+    text-decoration: underline dotted;
+}
+
+section p span::before,
+section p span::after {
+    content: '...';
+    width: 15px;
+    height: 5px;
+    visibility: hidden;
+}
+
+/*******************************************************************/
+/*
+/*                            Form.
+/*
+/*******************************************************************/
+
+form {
+    max-width: 980px;
+    margin: 0 auto;
+    font-size: var(--fs-for-multiple);
+    padding: 4rem;
+    background-color: var(--clr-primary);
+    border-radius: 5px;
+}
+
+.zone-1 input,
+.zone-2 textarea,
+fieldset{
+    width: 100%;
+}
+
+
+label:not([for="email"])::before {
+    content: '* ';
+    position: absolute;
+    width: 15px;
+    height: 20px;
+    text-align: center;
+    font-size: var(--fs-default);
+    color: var(--clr-accent);
+    transform: translate(-25px,-1px);
+    border-bottom:2px dotted var(--clr-accent) ;
+}
+
+fieldset > div {
+    margin-block-end: 2rem;
+}
+
+input,
+textarea {
+    font-size: var(--fs-default);
+    transition: 0.5s;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid var(--clr-chocolate);
+    border-radius: 5px;
+}
+
+input:not([type="submit"]):focus,
+textarea:focus {
+    border: 2.5px solid var(--clr-chocolate);
+}
+
+textarea {
+    resize: none;
+    padding: 25px;
+    height: 130px;
+    border: 2px solid var(--clr-chocolate);
+    border-radius: 5px;
+}
+
+.zone-1 {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 2rem;
+    align-items: center;
+}
+
+
+form > div:last-child {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+form > div:last-child input {
+    width: 50%;
+    color: var(--clr-default);
+    background-color: var(--clr-chocolate);
+    border: none;
+    transition: 0.5s;
+}
+
+form > div:last-child input:hover {
+    background-color: var(--clr-accent);
+}
+
+/*******************************************************************/
+/*
+/*                            medias queries.
+/*
+/*******************************************************************/
+
+/*small mobile*/
+@media screen and (max-width:480px) {
+    
+    main {
+        padding-inline: 1rem;
+    }
+
+    form {
+        padding-inline: 2rem;
+    }
+
+    .zone-1 {
+        flex-direction: column;
+    }
+
+    input,
+    textarea {
+        padding: 7px;
+    }
+
+    label:not([for="email"])::before {
+        content: '* ';
+        position: absolute;
+        width: 15px;
+        height: 20px;
+        text-align: center;
+        font-size: var(--fs-default);
+        color: var(--clr-accent);
+        transform: translate(-18px,-1px);
+        border-bottom: 2px dotted var(--clr-accent);
+    }
+}

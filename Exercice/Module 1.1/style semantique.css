@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: rgba(243, 243, 231, 0.822);
+    text-align: center;
+    
+}
+header>section>h1{
+    background-color: rgba(193, 197, 193, 0.774);
+    margin-top: 10px;
+    margin-block: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 15px;
+}
+header>section>nav{
+    background-color: rgba(190, 192, 190, 0.774);
+    margin-top: 10px;
+    margin-block: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+main{
+    background-color: rgba(243, 243, 231, 0.822);
+    text-align: center;
+}
+main>section{
+    background-color: rgba(172, 172, 165, 0.822);
+    text-align: center;
+    margin-top: 10px;
+    margin-block: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+main>section>h2{
+    background-color: rgba(92, 95, 92, 0.774);
+    margin-top: 8px;
+    margin-block: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 15px;
+}
+main>section>article{
+    background-color: rgba(83, 85, 83, 0.774);
+    margin-top: 10px;
+    margin-block: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 15px;
+}
+main>section>article>div>h3{
+    background-color: rgba(190, 192, 190, 0.774);
+    margin-top: 10px;
+    margin-block: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+main>section>article>div>p{
+    background-color: rgba(190, 192, 190, 0.774);
+    margin-top: 10px;
+    margin-block: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+footer{
+    text-align: center ;
+}
+

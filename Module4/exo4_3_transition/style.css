@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+:root{
+    --bg-menu-color: #DD5735;
+    --text-menu-color:#fff;
+}
+h1{
+    color: red;
+}
+header,footer{
+    background-color: rgb(70, 69, 69);
+    text-align: center;
+    padding: 20px;
+}
+header p,
+footer p{
+    color: white;
+}
+nav ul{
+    display: flex;
+
+}
+
+main{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li{
+    list-style: none;
+    padding: 20px;
+    color: var(--text-menu-color);
+    background-color: var(--bg-menu-color);
+    transition: color .2s ;
+    transition: background-color 1s ;
+}
+
+nav ul li:hover{
+    color: #333;
+    background-color:#fc3 ;
+    transform: scale(1.5);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* 
+## Au survol des rubriques
+- la couleur du texte passe progressivement à #333 (en 0.2s)
+- la couleur de fond passe progressivement à #fc3 (en 1s)
+- la rubrique est agrandie 1.5 fois (en 0.5s)
+
+Un exemple est montré à la rubrique 4 */

@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: red;
+}
+body{
+    background-color: rgb(141, 139, 135);
+}
+main{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header,footer{
+    background-color: rgb(58, 57, 57);
+    text-align: center;
+    padding: 30px;
+}
+header p,footer p{
+    color: white;}
+
+.svg2{
+    border: 3px solid black;
+    border-right: transparent;
+    background-color: white;
+    margin-bottom: 50px;
+    margin-left: 10px;
+}

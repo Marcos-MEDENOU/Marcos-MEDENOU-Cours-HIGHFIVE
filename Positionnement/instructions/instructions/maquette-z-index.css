@@ -1,0 +1,52 @@
+*,
+::after,
+::before{
+    box-sizing: border-box;
+}
+*{
+    font-size: 14px;
+}
+body{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 300px;
+    background-color: antiquewhite;
+}
+.div1{
+    position: relative;
+    width: 350px;
+    margin: 0 auto;
+}
+.div3{
+    width: 140px;
+    background-color: rgb(241, 113, 8);
+    position: absolute;
+    bottom: 18px;
+    color: white;
+    line-height: 8px;
+    z-index: 2;
+}
+.div2{
+    background-color: rgb(241, 164, 21);
+    position: absolute;
+    padding: 15px;
+    margin:auto;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    line-height: 8px;
+    color: rgb(255, 115, 0);
+    z-index: 1;
+    
+}
+.div2 p:last-child{
+    line-height: 20px;
+}
+span{
+    font-size: 36px;
+}
+
+.prix{
+    font-size: 36px;
+}

@@ -1,0 +1,20 @@
+*,::before,::after{
+    box-sizing: border-box;
+}
+body{
+    margin: auto;
+    width: 900px;
+}
+p{
+    border:1px solid rgb(190, 184, 184);
+    float:left;
+    width: 47%;
+    height: 10em;
+    background-color: rgb(120, 122, 122);
+}
+h2{
+    clear: left;
+}
+article{
+    border:1px dashed red;
+}

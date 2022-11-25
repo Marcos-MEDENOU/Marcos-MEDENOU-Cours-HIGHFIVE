@@ -1,0 +1,138 @@
+*,
+::before,
+::after{
+    box-sizing: border-box;
+}
+body{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header{
+    background-color: #00748d;
+    display: flex;
+    justify-content: space-around;
+    padding: 4px;
+    color: white;
+}
+footer{
+    background-color: #00748d;
+    display: flex;
+    justify-content: space-around;
+    padding: 4px;
+    color: white;
+}
+
+.header1{
+    display: flex;
+    gap: 10px;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+}
+li{
+    list-style: none;
+}
+.actualité{
+    background-color: white;
+    color: #00748d;
+    justify-items: center;
+    padding: 3px;
+}
+.section_cuisine{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: start;
+    gap: 2px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.notre_activite{
+    color: orange;
+    margin-left: 300px;
+    position: relative;
+
+}
+.notre_activite p{
+    font-size: 25px;
+    height: auto;
+    width: 100%;
+    
+}
+
+.image{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.para_cuisine{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.section_témoignage{
+    grid-column: 3/4;
+    grid-row: 1/4;
+}
+/* .notre_activite::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    border: 2px solid #00748d ;
+    left: -15px;
+    bottom: 13px;
+} */
+.une_cuisine{
+    color: #00748d;
+    margin-left: 300px;
+    position: relative;
+}
+/* .une_cuisine::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    border: 2px solid #00748d ;
+    left: -15px;
+    bottom: 13px;
+} */
+/* .para_cuisine {
+    width: 400px;
+    margin-left: 10px;
+    word-spacing: 2px;
+}*/
+.para_cuisine a{
+    text-decoration: none;
+    color: white;
+    background-color: #00748d;
+    padding: 12px;
+    margin-bottom: 10px;
+
+} 
+.para_cuisine2 a{
+    text-decoration: none;
+    color: white;
+    background-color: #00748d;
+    padding: 12px;
+    margin-bottom: 10px;
+
+} 
+.section_bureau{
+    display: grid;
+    margin-left: 50px;
+    margin-right: 50px;
+    grid-template-columns: 350px 350px 400px;
+    gap: 20px;
+    margin-top: 50px;
+}
+.para_cuisine4 nav ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.para_cuisine4 nav ul li{
+    flex-basis: 100%;
+    list-style: none;
+    list-style-image: url("./instructions/images/circle.png");
+}
+.h2{
+    text-align: center;
+}

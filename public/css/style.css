@@ -1,0 +1,61 @@
+
+/**************************************
+     MAIN
+***************************************/
+h2{
+    text-align: center;
+}
+
+
+nav>ul li:nth-child(2) a {
+    color: var(--clr-default);
+    background-color: var(--clr-chocolate);
+}
+
+.container_img{
+    background-color: var(--clr-primary);
+    border-radius: 10px;
+}
+
+main img{
+    width: 100%;
+    height: auto; 
+    border-radius: 8px;
+}
+
+figure{
+    padding-block: 10px ;
+}
+
+figcaption{
+    text-align: center;
+}
+
+#video{
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+/**************************************
+               MEDIA QUERRIES
+***************************************/
+
+@media screen and (min-width: 780px) {
+    
+    
+    .container_img {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+        padding: 20px;
+        /* transition: animation-name 5s; */
+    }
+    
+    main > article:last-child{
+        margin-bottom: 20px;
+    }
+    
+    }
+    

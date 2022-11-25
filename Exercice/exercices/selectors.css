@@ -1,0 +1,44 @@
+h2{
+    color: violet;
+    color: orange;
+}
+body{
+    background-color: #bdc3c7;
+}
+/*A revoir*/
+h1{
+    color: #9b59b6;
+}
+li{
+    color: blue;
+}
+p{
+    color: yellow;
+}
+input{
+    border: 3px solid red;
+}
+.hello{
+    background-color: white;
+}
+#special{
+    border: 2px solid blue;
+}
+div p{
+    font-size: 25px;
+}
+input[type="text"]{
+    background-color: gray;
+}
+div+div+div p{
+    color: coral;
+}
+div+div+div p+p{
+    border: 5px solid white;
+}
+div+div+div>p>em{
+    color: white;
+}
+
+
+

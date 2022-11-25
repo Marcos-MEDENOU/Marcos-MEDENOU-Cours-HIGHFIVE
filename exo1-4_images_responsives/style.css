@@ -1,0 +1,47 @@
+body{
+    margin: 0 auto;
+}
+header{
+    background-color: rgb(56, 55, 55);
+    padding: 10px;
+    text-align: center;
+}
+header p{
+    color: white;
+}
+footer{
+    background-color: rgb(56, 55, 55);
+    padding: 10px;
+    text-align: center;
+}
+footer p{
+    color: white;
+}
+h1,span{
+    color: red;
+}
+article p{
+    width: auto;
+}
+.container{
+    background-image: url(phare.jpg);
+    background-size:cover;
+    padding: 100px;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1{
+    display: flex;
+    background-color: white;
+    opacity: 0.7;
+    padding: 20px;
+    gap: 10px;
+    width: 900px;
+}
+.responsive{
+    max-width: 100%;
+    height: auto;
+}

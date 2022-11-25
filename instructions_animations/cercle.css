@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: red;
+}
+body{
+    background-color: rgb(70, 69, 67);
+
+}
+main{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header,footer{
+    background-color: rgb(58, 57, 57);
+    text-align: center;
+    padding: 30px;
+}
+header p,footer p{
+    color: white;
+}
+.container{
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+    border: 5px solid black;
+    border-radius: 50%;
+    position: relative;
+    animation: cercle_tournant 1s linear infinite ;
+}
+.cercle1{
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 8px;
+    left: 8px;
+    border-radius: 50%;
+    animation: cercle infinite;
+    border: 5px solid yellow; 
+}
+
+.cercle2{
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 8px;
+    left: -8px;
+    border: 5px solid red;
+    border-radius: 50%;
+    
+}
+
+/* @keyframes cercle {
+
+    0%{
+        transform: translateY(-20px); 
+     
+    }
+    50%{
+        transform: translateX(20px); 
+
+       
+    }
+    75%{
+         transform: translateY(6px); 
+
+     
+    }
+    100%{
+        transform: translateX(-20px); 
+
+    } 
+} */
+
+@keyframes cercle_tournant{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}

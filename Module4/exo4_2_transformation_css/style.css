@@ -1,0 +1,43 @@
+/*RESET */
+
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+header,footer{
+    background-color: rgb(59, 59, 58);
+    padding: 20px;
+    text-align: center;
+}
+
+body{
+    margin: 0 auto;
+}
+
+main{
+    height: 50vh;
+    margin-top: 60px;
+}
+header p{
+    color: white;
+}
+
+footer p{
+    color: white;
+}
+
+h1{
+    color: red;
+}
+.container img:hover{
+    transform: rotate(90deg);
+    transition: 0.5s;
+}
+.container img{
+    transition: 0.5s;
+}

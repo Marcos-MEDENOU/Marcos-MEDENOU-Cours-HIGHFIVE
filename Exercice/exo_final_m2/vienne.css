@@ -1,0 +1,44 @@
+*,
+::before,
+::after{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: lato;
+    src: url("");
+}
+body{
+    font-family: lato;
+}
+header{
+    text-align: center;
+}
+body main{
+    width: 900px;
+    margin:0 auto;
+}
+li{
+    list-style: none;
+    background-color: #40CCEA;
+    padding: 20px;
+    color: white;
+}
+h1{
+    color: #40CCEA;
+    margin-bottom: 10px;
+    font-size: 3rem;
+    text-align: center;
+    border-bottom: 1px dashed #40CCEA;
+}
+main section article div{
+    float: right;
+    width: 48%;
+    margin-left: 10px;
+}
+main .section2 article p{
+    width: 48%;
+
+} 
+/* .article2{
+    float: right;
+} */

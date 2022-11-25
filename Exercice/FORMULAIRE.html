@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon forùmulaire</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Mon premier formulaire</h1>
+    <form action="contact.php" method="post">
+        <label for="champ">Nom</label>
+        <input id= "champ" type="text" name="nom de l'utilisateur">
+        <p>
+            <label for="champ2">Password</label>
+            <input id="champ2" type="password" name="mot-de-passe" >
+        </p>
+        <p>
+            <label for="mail">email</label>
+            <input id="mail" type="email" name="email" >
+        </p>
+        <p>
+            <label for="nombre">Age</label>
+            <input id="nombre" type="number" name="nombre1" >
+        </p>
+        <p>
+            <label for="champ3">Photo d'identité</label>
+            <input id="champ3" type="file" name="fichier" >
+        </p>
+        <p>
+            <label for="champ4">Masculin</label>
+            <input id="champ4" type="radio" name="fichier" >
+            <label for="champ4">Féminin</label>
+            <input id="champ4" type="radio" name="fichier" >
+            <label for="champ4"></label>
+            <input id="champ4" type="radio" name="fichier" >
+        </p>
+        <div>
+            <input id="check" type="checkbox" name="une checkbox">
+            <label for="check">J'accepte les conditions d'utilisations</label>
+        </diiv>
+        <div>
+            <input id="check" type="checkbox" name="une checkbox">
+            <label for="check">Je confirme tout ce qui est écrit</label>
+        </div>
+        
+        
+    </form>
+</body>
+</html>

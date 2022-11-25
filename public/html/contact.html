@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--meta-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--title-->
+    <title>Freshly Restaurant</title>
+    <!--favicon-->
+    <link rel="shortcut icon" href="../assets/ressources/images/favicon.png" type="image/png">
+    <!--style-->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <!--fonts cdn-->
+    <script src="https://kit.fontawesome.com/b48549a02e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header class="max-width-1400">
+        <!--logo-->
+        <div>
+            <a href="index.html" class="logo">
+                <img src="../assets/ressources/images/logo.png" alt="logo Freshly Restaurant">
+            </a>
+            <h1 class="before-star after-star">Freshly Restaurant</h1>
+        </div>
+        <!--nav-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menus.html">Menus</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--main-->
+    <main class="max-width-1400">
+        <section>
+            <h2 class="before-star after-star">Contact us</h2>
+            <p>If your want to make a reservation, please complete this form.</p>
+            <p>Fields with <span>* </span>  are required.</p>
+            <form action="#" method="post">
+                <!--DATA container-->
+                <div>
+                    <div class="zone-1">
+                        <!--reservation field-->
+                        <fieldset>
+                            <legend>Reservation</legend>
+                            <div>
+                                <label for="date">Date</label>
+                                <input type="date" name="date" id="date" required>
+                            </div>
+                            <div>
+                                <label for="time">Time</label>
+                                <input type="time" name="time" id="time" required>
+                            </div>
+                            <div>
+                                <label for="number">Number of guests</label>
+                                <input type="number" name="number" id="number" min="0" required>
+                            </div>
+                        </fieldset>
+
+                        <!--details field-->
+                        <fieldset>
+                            <legend>Details</legend>
+                            <div>
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" maxlength="24" required>
+                            </div>
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                            <div>
+                                <label for="tel">Telephone</label>
+                                <input type="tel" name="tel" id="tel" required>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="zone-2">
+                        <!--further request field-->
+                        <fieldset>
+                            <legend>Further request</legend>
+                            <textarea name="request" id="request"></textarea>
+                        </fieldset>
+                    </div>
+                </div>
+                <!--submit container-->
+                <div>
+                    <input type="submit" value="RESERVE">
+                </div>
+            </form>
+        </section>
+        <section>
+            <h2 class="before-star after-star">Our location</h2>
+            <img src="../assets/ressources/images/map.png" alt="map">
+        </section>
+    </main>
+
+    <!--footer-->
+    <footer>
+        <div class="first-footer">
+            <div class="max-width-1400">
+                <!--opening hour section-->
+                <section>
+                    <h2>Opening hours</h2>
+                    <div>
+                        <p>Monday: Closed</p>
+                        <p>Tue-Wed : 9am - 10pm</p>
+                        <p>Thu-Fri : 9am - 10pm</p>
+                        <p>Sat-Sun : 5pm - 10pm</p>
+                    </div>
+                </section>
+                <!--contact section-->
+                <section>
+                    <h2>Contact</h2>
+                    <address>
+                        <p>13 Christopher Street<br>New York,<br>NY 10014-3543</p>
+                        <p><a href="tel:+0120008009999">+01 2000 800 9999</a></p>
+                    </address>
+                </section>
+                <!--social network section-->
+                <section>
+                    <h2>Social networks</h2>
+                    <div class="icon-box">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="second-footer">
+            <div class="max-width-1400">
+                <img src="../assets/ressources/images/logo-3wa.png" alt="Propriété de la 3W Academy">
+                <p>Cet exercice de <a href="#" rel="licence">3W Academy</a> est mis à disposition <a href="#"> pour
+                        l'usage personnel
+                        des étudiants. Pas de Rediffusion - Attribution - Pas d'Utilisation Commerciale - Pas de
+                        Modification - International.</a>
+                    Les autorisations au-delà du champ de cette licence peuvent être obtenues auprès de <a
+                        href="mailto:contact@3wa.fr">contact@3wa.fr</a>. Les maquettes ont été réalisées par <a href="#"
+                        rel="author">Catherine Denos</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

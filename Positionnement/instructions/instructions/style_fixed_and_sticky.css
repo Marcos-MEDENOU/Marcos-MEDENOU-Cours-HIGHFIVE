@@ -1,0 +1,54 @@
+body{
+    background-color: rgb(202, 199, 192);
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: red;
+    padding: 10px 0px;
+    
+}
+nav{
+    position: sticky;
+    top: 1rem;
+}
+main{
+    margin: auto;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+h1{
+    color: red;
+}
+header{
+    background-color: black;
+    padding-bottom: 10px;
+    text-align: center;
+    
+}
+header p{
+    color: white;
+}
+article{
+    background-color: white;
+    padding: 10px;
+    margin-top: 15px;
+    
+}
+footer{
+    text-align: center;
+    padding-top: 15px;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+   
+}
+footer p{
+    color: white;
+}
+.para{
+    margin-bottom: 230px;
+}

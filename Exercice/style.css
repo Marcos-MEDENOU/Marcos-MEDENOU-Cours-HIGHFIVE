@@ -1,0 +1,16 @@
+body{
+    background-color: antiquewhite;
+}
+.div1{
+    border: 1px solid black;
+}
+.div2{
+    border: 1px solid black;
+    
+}
+.div3{
+    border: 1px dotted red;
+}
+div{
+    float: left;
+}

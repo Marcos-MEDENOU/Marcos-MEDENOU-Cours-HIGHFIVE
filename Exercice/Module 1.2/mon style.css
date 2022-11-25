@@ -1,0 +1,71 @@
+@font-face {
+    font-family: Courgette;
+    src: url("./font/Courgette-Regular.ttf") ;
+}
+.nav{
+    color: #003884;
+    text-align: left;
+}
+.d1{
+    text-align: center;
+    font-family: Courgette;
+}
+body{ 
+    width: 960px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+.golden{
+    color: #003884;
+    font-weight: bold;
+}
+
+.S1{
+    background-color:antiquewhite;
+    text-align: center;
+    color: #003884;
+    background-color: #d7e1ef;
+    margin: 15px;
+}
+.ed{
+    color: blue;
+    text-align: center;
+}
+.S4{
+    float: right;
+}
+.S3{
+    float: left;
+}
+.S6{
+    float: left;
+    height: 180px;
+}
+.S5{
+    float: right;
+    width: 200px;
+    height: 220px;
+}
+.A1{
+    text-align: center;
+    color:  #4f89b9;
+}
+.A2{
+    text-align: center;
+    color: #003884 ;
+}
+.A3{
+    color: #003884 ;
+    text-align: center;
+}
+.A4{
+    color:  #4f89b9;
+    text-align: center;
+}
+.A5{
+    color:  #4f89b9;
+    text-align: center;
+}
+.F{
+    text-align: center;
+}

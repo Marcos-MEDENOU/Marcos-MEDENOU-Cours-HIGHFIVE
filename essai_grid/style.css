@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    
+}
+
+.container>div{
+    background-color: rgb(152, 224, 152);
+    border: 1px solid black;
+    padding: 50px;
+}
+.Item1{
+    grid-area:1/1/2/4 ;
+    display: grid;
+    place-items: center;
+}
+.Item2{
+    grid-area: 2/1/4/3;
+    display: grid;
+    place-items: center;
+}
+

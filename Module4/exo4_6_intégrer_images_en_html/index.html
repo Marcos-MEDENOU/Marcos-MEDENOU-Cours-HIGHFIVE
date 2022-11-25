@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images_en_html</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Intégrer des médias en html</h1>
+        <p>Utlisation de services tiers et des élements AUDIO, VIDEO pour intégrer des sons et des vidéos</p>
+    </header>
+    <main>
+        <section>
+            <h2>La dernière conférence de Lea Verou (sur Video)</h2>
+            <iframe src="https://vimeo.com/364399309" frameborder="0" width="500" height="281"></iframe>
+            <p>Lea Verou - The web design Cheat code: Using SVG to Bridge CSS Gaps' <span>from</span> Fronteers on Vimeo</p>
+        </section>
+        <section>
+            <h2>La balise video</h2>
+            <video controls poster="./instructions/ressources/bunny.jpg">
+                <source src="./instructions/ressources/bunny.mp4" type="video/mp4">
+                <source src="./instructions/ressources/bunny.ogv" type="video/ogv">
+            </video>
+        </section>
+        <section class="section3">
+            <h2>La balise audio</h2>
+            <video preload="auto" autoplay controls loop muted >
+                <source src="./instructions/ressources/space.mp3" type="audio/mp3">
+                <source src="./instructions/ressources/space.ogg" type="audio/ogg">
+                <source src="./instructions/ressources/space.wav" type="audio/wav">
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <img src="./logo-3wa.png" alt="logo_de_la_3W">
+        <p>Ce matériel pédagogique est la propriété de la <span> 3W Academy</span>. Cet exercice a été réaliser par <span> Cathérine Denos </span></p>
+    </footer>
+</body>
+</html>

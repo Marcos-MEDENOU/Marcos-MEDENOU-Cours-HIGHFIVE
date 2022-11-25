@@ -1,0 +1,112 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    margin: 0 auto;
+}
+#header{
+    text-align: center;
+    background-color:rgb(36, 32, 32) ;
+    height: 90px;
+    
+}
+.image{
+    background-image: url("large.jpg");
+    width: 600px;
+    height: 400px;
+    margin-top: 10px; 
+    background-repeat: no-repeat;
+    background-attachment: scroll;  
+}
+.image2{
+    background-image: url("small.jpg");
+    width: 600px;
+    height: 400px;
+    background-repeat: repeat;
+}
+#logo{
+    margin: 30px
+}
+.image3{
+    background-image: url("small.jpg");
+    color: #fff;
+    background-color: teal;
+    background-repeat: no-repeat;
+    background-position: top left;
+    width:600px ;
+    height:400px ;
+}
+.image4{
+    background-image: url("small.jpg");
+    color: #fff;
+    background-color: teal;
+    background-repeat: repeat-x;
+    background-position: top left;
+    width:600px ;
+    height:400px ;
+}
+.image5{
+    background-image: url("small.jpg");
+    color: #fff;
+    background-color: teal;
+    background-repeat: repeat-y;
+    background-position: top left;
+    width:600px ;
+    height:400px ;
+}
+.image6{
+    background-image: url("large.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: teal;
+    color: #fff;
+    width:600px;
+    height:400px;
+}
+.image7{
+    background-image: url("large.jpg");
+    background-size: cover;
+    color: #fff;
+    background-color: teal;
+    background-repeat: no-repeat;
+    background-position: top left;
+    width:600px ;
+    height:400px ;
+}
+.image8{
+    background-image: url("large.jpg");
+    background-size: 50%;
+    color: #fff;
+    background-color: teal;
+    background-repeat: no-repeat;
+    background-position: top left;
+    width:600px ;
+    height:400px ;
+}
+.image9{
+    background-image: url("large.jpg");
+    background-size: 80% 40%;
+    color: #fff;
+    background-color: teal;
+    background-repeat: no-repeat;
+    background-position: top left;
+    width:500px ;
+    height:300px ;
+}
+.image10{
+    background-image: url("small.jpg");
+    color: #fff;
+    background-color: teal;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:600px ;
+    height:400px ;
+}
+.image11{
+    background-image: url("small.jpg");
+    color: #fff;
+    background-color: teal;
+    background-repeat: no-repeat;
+    background-position: top right;
+    width:600px ;
+    height:400px ;
+}

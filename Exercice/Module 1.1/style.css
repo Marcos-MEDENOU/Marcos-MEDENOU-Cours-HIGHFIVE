@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: rgb(192, 192, 192);
+}
+header >section{
+background-color: rgb(44, 44, 44);
+text-align: center;
+color: white;
+}
+header >section>h1{
+    color: red;
+}
+footer{
+    background-color: rgb(192, 192, 192);
+}
+footer > section{
+    padding: 2em;
+    background-color: rgb(44, 44, 44);
+    text-align: center;
+    color: white;
+
+}
+footer >section >p >span{
+    color: red;
+}
+main{
+    display:flex ;
+    padding: 2em;
+}
